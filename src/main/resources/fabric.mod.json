@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "towers_of_the_wild_reworked",
+  "version": "${version}",
+
+  "name": "Towers of the Wild: Reworked",
+  "description": "This mod adds tall towers in your world, inspired by The Legend Of Zelda : Breath Of The Wild.",
+  "authors": [
+    "Idrae",
+    "xPand4B",
+    "Rainerle3000"
+  ],
+  "contact": {
+    "homepage": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked",
+    "sources": "https://github.com/Idrae/Towers_Of_The_Wild-1.16.3"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fabricmc.towers_of_the_wild_reworked.TowersOfTheWildReworked"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
