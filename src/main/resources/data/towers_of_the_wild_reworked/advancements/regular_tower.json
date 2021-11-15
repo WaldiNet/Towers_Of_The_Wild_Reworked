@@ -1,0 +1,33 @@
+{
+    "parent": "towers_of_the_wild_reworked:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_bricks"
+        },
+        "title": {
+            "translate": "A breath of fresh air"
+        },
+        "description": {
+            "translate": "Fine...but how do I get up there?"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "regular_tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "location": {
+                    "feature": "towers_of_the_wild_reworked:regular_tower"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "regular_tower"
+        ]
+    ]
+}

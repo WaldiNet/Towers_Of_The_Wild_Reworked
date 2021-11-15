@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.towers_of_the_wild_reworked.mixin",
+  "package": "waldinet.towers_of_the_wild_reworked.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "StructurePoolsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
