@@ -1,0 +1,33 @@
+{
+    "parent": "towers_of_the_wild_reworked:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_bricks"
+        },
+        "title": {
+            "translate": "jungle_tower"
+        },
+        "description": {
+            "translate": "jungle_tower"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "jungle_tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "location": {
+                    "feature": "towers_of_the_wild_reworked:jungle_tower"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "jungle_tower"
+        ]
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "parent": "towers_of_the_wild_reworked:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:grass"
+        },
+        "title": {
+            "translate": "derelict_grass_tower"
+        },
+        "description": {
+            "translate": "derelict_grass_tower"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "derelict_grass_tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "location": {
+                    "feature": "towers_of_the_wild_reworked:derelict_grass_tower"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "derelict_grass_tower"
+        ]
+    ]
+}

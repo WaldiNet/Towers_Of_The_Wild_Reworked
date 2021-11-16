@@ -1,0 +1,33 @@
+{
+    "parent": "towers_of_the_wild_reworked:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_bricks"
+        },
+        "title": {
+            "translate": "ocean_tower"
+        },
+        "description": {
+            "translate": "ocean_tower"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ocean_tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "location": {
+                    "feature": "towers_of_the_wild_reworked:ocean_tower"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "ocean_tower"
+        ]
+    ]
+}

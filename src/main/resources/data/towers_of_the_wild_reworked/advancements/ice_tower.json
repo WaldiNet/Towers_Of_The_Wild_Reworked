@@ -1,0 +1,33 @@
+{
+    "parent": "towers_of_the_wild_reworked:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:ice"
+        },
+        "title": {
+            "translate": "ice_tower"
+        },
+        "description": {
+            "translate": "ice_tower"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ice_tower": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "location": {
+                    "feature": "towers_of_the_wild_reworked:ice_tower"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "ice_tower"
+        ]
+    ]
+}
