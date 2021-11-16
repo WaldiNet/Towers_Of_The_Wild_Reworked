@@ -10,17 +10,17 @@ import net.minecraft.util.Identifier;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
-public class RegularTowerGenerator
+public class IceTowerGenerator
 {
     public static final StructurePool STARTING_POOL;
     
     static {
         STARTING_POOL = StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "regular_bottom"),
+                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "ice_bottom"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":regular/tower_bottom"), 1)
+                    new Pair<>(StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ice/ice_tower_bottom"), 1)
                 ),
                 StructurePool.Projection.RIGID
             )  
@@ -28,13 +28,13 @@ public class RegularTowerGenerator
 
         StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "regular_top"),
+                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "ice_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
                     new Pair<>(
                         ModUtils.waystonesInstalled()
-                        ? StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":regular/waystone_tower_top")
-                        : StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":regular/tower_top")
+                        ? StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ice/waystone_ice_tower_top")
+                        : StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ice/ice_tower_top")
                     , 1)
                 ),
                 StructurePool.Projection.RIGID

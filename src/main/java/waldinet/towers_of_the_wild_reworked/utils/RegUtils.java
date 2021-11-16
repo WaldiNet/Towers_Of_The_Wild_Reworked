@@ -15,6 +15,7 @@ import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
+import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 
 public class RegUtils
 {
@@ -34,6 +35,7 @@ public class RegUtils
             selectorPredicate,
             biomeAdditionConsumer
         );
+        TowersOfTheWildReworked.LOGGER.info(String.format("Loaded structure: '%s'", id));
     }
 
     public static void addStructure(BiomeModificationContext context, ConfiguredStructureFeature<?, ?> feature)
@@ -52,5 +54,7 @@ public class RegUtils
             .superflatFeature(feature);
 
         builder.register();
+
+        TowersOfTheWildReworked.LOGGER.info(String.format("Registered structure: '%s'", id));
     }
 }

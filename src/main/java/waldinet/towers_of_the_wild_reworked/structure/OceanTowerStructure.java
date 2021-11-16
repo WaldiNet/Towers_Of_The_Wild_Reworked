@@ -1,5 +1,7 @@
 package waldinet.towers_of_the_wild_reworked.structure;
 
+import com.mojang.serialization.Codec;
+
 import net.minecraft.structure.MarginedStructureStart;
 import net.minecraft.structure.PoolStructurePiece;
 import net.minecraft.structure.StructureManager;
@@ -8,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.registry.DynamicRegistryManager;
 import net.minecraft.world.HeightLimitView;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSource;
 import net.minecraft.world.gen.ChunkRandom;
@@ -19,36 +22,17 @@ import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
 /**
  * Helper class to move all the IDs from former Structure classes
  */
-public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
+public class OceanTowerStructure extends StructureFeature<StructurePoolFeatureConfig>
 {
-    private final int structureStartY;
-    private final boolean modifyBoundingBox;
-    private final boolean surface;
-
-    //#region Constructor
-    public TowerStructure()
-    {
-        this(1);
-    }
-
-    public TowerStructure(int structureStartY)
-    {
-        this(structureStartY, true, true);
-    }
-
-    public TowerStructure(int structureStartY, boolean modifyBoundingBox, boolean surface)
+    public OceanTowerStructure()
     {
         super(StructurePoolFeatureConfig.CODEC);
-        this.structureStartY = structureStartY;
-        this.modifyBoundingBox = modifyBoundingBox;
-        this.surface = surface;
     }
-    //#endregion
 
     @Override
     public StructureStartFactory<StructurePoolFeatureConfig> getStructureStartFactory()
     {
-        return TowerStructure.Start::new;
+        return OceanTowerStructure.Start::new;
     }
 
     @SuppressWarnings("ObjectAllocationInLoop")
@@ -64,7 +48,12 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
         StructurePoolFeatureConfig config,
         HeightLimitView world
     ) {
-        return true;
+        int x = pos.x * 16;
+        int z = pos.z * 16 ;
+
+        int oceanFloor = chunkGenerator.getHeight(x, z, Heightmap.Type.OCEAN_FLOOR_WG, world);
+
+        return oceanFloor <= 38;
     }
 
     public static class Start extends MarginedStructureStart<StructurePoolFeatureConfig>
@@ -86,7 +75,14 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
             StructurePoolFeatureConfig config,
             HeightLimitView world
         ) {
-            TowerStructure structure = (TowerStructure) this.getFeature();
+            int x = pos.x * 16;
+            int z = pos.z * 16 ;
+
+            BlockPos blockPos = new BlockPos(
+                x,
+                chunkGenerator.getHeight(x, z, Heightmap.Type.OCEAN_FLOOR_WG, world) - chunkGenerator.getHeight(x, z, Heightmap.Type.WORLD_SURFACE_WG, world),
+                z
+            );
 
             StructUtils.initPools();
             StructurePoolBasedGenerator.generate(
@@ -95,11 +91,11 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
                 PoolStructurePiece::new,
                 chunkGenerator,
                 manager,
-                new BlockPos(pos.x << 4, structure.structureStartY, pos.z << 4),
+                blockPos, // new BlockPos(pos.x << 4, structure.structureStartY, pos.z << 4),
                 this,
                 this.random,
-                structure.modifyBoundingBox,
-                structure.surface,
+                true,
+                true,
                 world
             );
             this.setBoundingBoxFromChildren();
