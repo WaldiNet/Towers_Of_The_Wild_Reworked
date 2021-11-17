@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
+import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 import waldinet.towers_of_the_wild_reworked.structure.*;
 import waldinet.towers_of_the_wild_reworked.utils.RegUtils;
 import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
@@ -39,6 +40,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 		LOGGER.info("Initializing...");
 
 		// Loading config
+		ConfigManager.getInstance().getConfig();
 		
 
 		// Registering Structures and Features
@@ -98,14 +100,18 @@ public class TowersOfTheWildReworked implements ModInitializer
 		// Ice
 		RegUtils.addToBiome(
 			StructUtils.ICE_TOWER,
-			BiomeSelectors.categories(Category.ICY).and(BiomeSelectors.foundInOverworld()),
+			BiomeSelectors
+				.categories(Category.ICY)
+				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.ICE_TOWER)
 		);
 
 		// Jungle
 		RegUtils.addToBiome(
 			StructUtils.JUNGLE_TOWER,
-			BiomeSelectors.categories(Category.JUNGLE).and(BiomeSelectors.foundInOverworld()),
+			BiomeSelectors
+				.categories(Category.JUNGLE)
+				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.JUNGLE_TOWER)
 		);
 
@@ -113,7 +119,9 @@ public class TowersOfTheWildReworked implements ModInitializer
 		// Lower by 21
 		RegUtils.addToBiome(
 			StructUtils.OCEAN_TOWER,
-			BiomeSelectors.categories(Category.OCEAN).and(BiomeSelectors.foundInOverworld()),
+			BiomeSelectors
+				.categories(Category.OCEAN)
+				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.OCEAN_TOWER)
 		);
 

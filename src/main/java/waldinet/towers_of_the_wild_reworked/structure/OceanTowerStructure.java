@@ -1,7 +1,5 @@
 package waldinet.towers_of_the_wild_reworked.structure;
 
-import com.mojang.serialization.Codec;
-
 import net.minecraft.structure.MarginedStructureStart;
 import net.minecraft.structure.PoolStructurePiece;
 import net.minecraft.structure.StructureManager;

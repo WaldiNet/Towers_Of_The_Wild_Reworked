@@ -1,3 +1,25 @@
 {
-    "Towers of the Wild: Reworked": "Towers of the Wild: Reworked"
+    "Towers of the Wild: Reworked": "Towers of the Wild: Reworked",
+    "category.towers_of_the_wild_reworked.towers": "",
+    
+    "A list of biomes where the towers will not spawn.": "A list of biomes where the towers will not spawn.",
+
+    "Enabled": "Enabled",
+    "Rarity": "Rarity",
+    "How rarely this tower type will spawn (low: common, high: rare)": "How rarely this tower type will spawn (low: common, high: rare)",
+
+    "Derelict Grass Tower": "Derelict Grass Tower",
+    "Derelict Tower": "Derelict Tower",
+    "Ice Tower": "Ice Tower",
+    "Jungle Tower": "Jungle Tower",
+    "Ocean Tower": "Ocean Tower",
+    "Ocean Warm Tower": "Ocean Warm Tower",
+    "Regular Tower": "Regular Tower",
+
+    "Mod Integrations": "Mod Integrations",
+    "Spawn Waystones on top": "Spawn Waystones on top",
+    "If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect.": "If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect.",
+
+    "modmenu.original_source": "Original Source",
+    "modmenu.descriptionTranslation.towers_of_the_wild_reworked": "Adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild."
 }

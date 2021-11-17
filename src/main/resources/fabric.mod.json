@@ -3,11 +3,10 @@
   "id": "towers_of_the_wild_reworked",
   "version": "${version}",
   "name": "Towers of the Wild: Reworked",
-  "description": "This mod adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild.",
+  "description": "Adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild.",
   "authors": [
     "xPand4B",
-    "Rainerle3000",
-    "Idrae"
+    "Rainerle3000"
   ],
   "contact": {
     "homepage": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked",
@@ -15,17 +14,33 @@
     "issues": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/towers_of_the_wild_reworked/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked"
+    ],
+    "modmenu": [
+      "waldinet.towers_of_the_wild_reworked.config.screens.ModMenuIntegration"
     ]
   },
   "mixins": [
     "towers_of_the_wild_reworked.mixins.json"
+  ],
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.original_source": "https://github.com/Idrae/Towers_Of_The_Wild-1.16.3",
+        "modmenu.discord": "https://discord.gg/9Y8pCWR5tw"
+      }
+    }
+  },
+
+  "contributors": [
+    "Idrae"
   ],
 
   "depends": {
