@@ -10,6 +10,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
+import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 import waldinet.towers_of_the_wild_reworked.config.tower.*;
 
 public class ConfigScreen
@@ -34,19 +35,10 @@ public class ConfigScreen
     {
         // Base Settings
         _builder.setTitle(new TranslatableText("Towers of the Wild: Reworked"))
-            .setDefaultBackgroundTexture(new Identifier("minecraft:textures/block/oak_planks.png"));
-            // .setSavingRunnable(() -> {
-            //     Toml4jConfigSerializer<TowersOfTheWildReworkedConfig> configSerializer = new Toml4jConfigSerializer<TowersOfTheWildReworkedConfig>(
-            //         ?,
-            //         TowersOfTheWildReworkedConfig.class
-            //     );
-
-            //     try {
-            //         configSerializer.serialize(ConfigManager.getInstance().getConfig());
-            //     } catch (SerializationException e) {
-            //         e.printStackTrace();
-            //     }
-            // });
+            .setDefaultBackgroundTexture(new Identifier("minecraft:textures/block/oak_planks.png"))
+            .setSavingRunnable(() -> {
+                ConfigManager.getInstance().saveConfig();
+            });
     }
 
     /**
@@ -58,14 +50,13 @@ public class ConfigScreen
         ConfigEntryBuilder entry = _builder.entryBuilder();
         ConfigCategory category = _builder.getOrCreateCategory(new TranslatableText("category."+TowersOfTheWildReworked.MOD_ID+".towers"));
 
-        category.addEntry((new DerelictTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new DerelictGrassTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new IceTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new JungleTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new OceanTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new OceanWarmTowerConfig()).getConfigBuilder(entry).build());
-        category.addEntry((new RegularTowerConfig()).getConfigBuilder(entry).build());
-
+        category.addEntry(DerelictGrassTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(DerelictTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(IceTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(JungleTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(OceanTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(OceanWarmTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(RegularTowerConfig.getConfigBuilder(entry).build());
 
         /**
          * Biome Blacklist
