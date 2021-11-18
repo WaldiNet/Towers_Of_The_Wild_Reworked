@@ -22,7 +22,7 @@ public class DerelictGrassTowerGenerator
                 ImmutableList.of(
                     new Pair<>(StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":derelict_grass/derelict_grass_tower_bottom"), 1)
                 ),
-                StructurePool.Projection.RIGID
+                StructurePool.Projection.TERRAIN_MATCHING
             )  
         );
 

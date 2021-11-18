@@ -2,6 +2,12 @@ package waldinet.towers_of_the_wild_reworked.utils;
 
 import net.minecraft.util.Identifier;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
+import waldinet.towers_of_the_wild_reworked.generator.DerelictGrassTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.DerelictTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.IceTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.JungleTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.OceanTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.OceanWarmTowerGenerator;
 import waldinet.towers_of_the_wild_reworked.generator.RegularTowerGenerator;
 
 /**
@@ -24,6 +30,12 @@ public class StructUtils
      */
     public static void initPools()
     {
+        DerelictGrassTowerGenerator.init();
+        DerelictTowerGenerator.init();
+        IceTowerGenerator.init();
+        JungleTowerGenerator.init();
+        OceanTowerGenerator.init();
+        OceanWarmTowerGenerator.init();
         RegularTowerGenerator.init();
     }
 }

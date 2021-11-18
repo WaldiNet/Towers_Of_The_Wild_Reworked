@@ -13,8 +13,8 @@ public final class ConfigManager
     public ConfigManager()
     {
         AutoConfig.register(TowersOfTheWildReworkedConfig.class, Toml4jConfigSerializer::new);
-        saveConfig();
-        TowersOfTheWildReworked.LOGGER.info("Config loaded.");
+        AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).load();
+        TowersOfTheWildReworked.LOGGER.info("Config loaded!");
     }
 
     public static ConfigManager getInstance()
@@ -28,19 +28,15 @@ public final class ConfigManager
 
     public TowersOfTheWildReworkedConfig getConfig()
     {
-        if (_config == null) {
-            _config = AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).getConfig();
-        }
-
-        return _config;
+        return AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).getConfig();
     }
 
     public void saveConfig()
     {
-        AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, configObject) -> {
-            _config = configObject;
-            return ActionResult.PASS;
-        });
+        // AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, configObject) -> {
+        //     _config = configObject;
+        //     return ActionResult.PASS;
+        // });
 
         AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).save();
     }

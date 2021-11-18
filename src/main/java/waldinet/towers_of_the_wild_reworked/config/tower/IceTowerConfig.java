@@ -7,8 +7,8 @@ import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 
 public class IceTowerConfig
 {
-    private boolean enabled = true;
-    private int rarity = 40;
+    public boolean enabled = true;
+    public int rarity = 40;
 
     public static SubCategoryBuilder getConfigBuilder(ConfigEntryBuilder entry)
     {

@@ -43,18 +43,41 @@ public class RegUtils
         context.getGenerationSettings().addBuiltInStructure(feature);
     }
 
+    public static Predicate<BiomeSelectionContext> booleanToPredicate(boolean bool)
+    {
+        return (context) -> bool;
+    }
+
     public static <FC extends FeatureConfig, S extends StructureFeature<FC>> void registerStructure(
         Identifier id,
-        S f,
-        ConfiguredStructureFeature<FC, ? extends StructureFeature<FC>> feature
+        S towerStructure,
+        ConfiguredStructureFeature<FC, ? extends StructureFeature<FC>> configFeature,
+        int spacing,
+        int separation,
+        int salt,
+        boolean adjustSurface
     ) {
-        FabricStructureBuilder<FC, S> builder = FabricStructureBuilder.create(id, f)
+        FabricStructureBuilder<FC, S> builder = FabricStructureBuilder.create(id, towerStructure)
             .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-            .defaultConfig(32, 8, 12345)
-            .superflatFeature(feature);
+            .defaultConfig(spacing, separation, salt)
+            .superflatFeature(configFeature);
 
+        if (adjustSurface) {
+            builder.adjustsSurface();
+        }
         builder.register();
 
         TowersOfTheWildReworked.LOGGER.info(String.format("Registered structure: '%s'", id));
+    }
+
+    public static <FC extends FeatureConfig, S extends StructureFeature<FC>> void registerStructure(
+        Identifier id,
+        S towerStructure,
+        ConfiguredStructureFeature<FC, ? extends StructureFeature<FC>> configFeature,
+        int spacing,
+        int separation,
+        int salt
+    ) {
+        registerStructure(id, towerStructure, configFeature, spacing, separation, salt, true);
     }
 }

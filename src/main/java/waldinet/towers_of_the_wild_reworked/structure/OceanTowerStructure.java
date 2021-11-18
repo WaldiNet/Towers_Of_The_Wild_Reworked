@@ -20,11 +20,11 @@ import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
 /**
  * Helper class to move all the IDs from former Structure classes
  */
-public class OceanTowerStructure extends StructureFeature<StructurePoolFeatureConfig>
+public class OceanTowerStructure extends AbstractTowerStructure
 {
     public OceanTowerStructure()
     {
-        super(StructurePoolFeatureConfig.CODEC);
+        super(7);
     }
 
     @Override
@@ -46,9 +46,12 @@ public class OceanTowerStructure extends StructureFeature<StructurePoolFeatureCo
         StructurePoolFeatureConfig config,
         HeightLimitView world
     ) {
-        int x = pos.x * 16;
-        int z = pos.z * 16 ;
+        if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
+            return false;
+        }
 
+        int x = pos.x * 16;
+        int z = pos.z * 16;
         int oceanFloor = chunkGenerator.getHeight(x, z, Heightmap.Type.OCEAN_FLOOR_WG, world);
 
         return oceanFloor <= 38;
@@ -73,14 +76,11 @@ public class OceanTowerStructure extends StructureFeature<StructurePoolFeatureCo
             StructurePoolFeatureConfig config,
             HeightLimitView world
         ) {
+            OceanTowerStructure structure = (OceanTowerStructure) this.getFeature();
+
             int x = pos.x * 16;
             int z = pos.z * 16 ;
-
-            BlockPos blockPos = new BlockPos(
-                x,
-                chunkGenerator.getHeight(x, z, Heightmap.Type.OCEAN_FLOOR_WG, world) - chunkGenerator.getHeight(x, z, Heightmap.Type.WORLD_SURFACE_WG, world),
-                z
-            );
+            int y = chunkGenerator.getHeight(x, z, Heightmap.Type.OCEAN_FLOOR_WG, world) - chunkGenerator.getHeight(x, z, Heightmap.Type.WORLD_SURFACE_WG, world);
 
             StructUtils.initPools();
             StructurePoolBasedGenerator.generate(
@@ -89,11 +89,11 @@ public class OceanTowerStructure extends StructureFeature<StructurePoolFeatureCo
                 PoolStructurePiece::new,
                 chunkGenerator,
                 manager,
-                blockPos, // new BlockPos(pos.x << 4, structure.structureStartY, pos.z << 4),
+                new BlockPos(x, y, z),
                 this,
                 this.random,
-                true,
-                true,
+                structure.modifyBoundingBox,
+                structure.surface,
                 world
             );
             this.setBoundingBoxFromChildren();

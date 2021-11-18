@@ -7,8 +7,8 @@ import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 
 public class OceanTowerConfig
 {
-    private boolean enabled = true;
-    private int rarity = 32;
+    public boolean enabled = true;
+    public int rarity = 32;
 
     public static SubCategoryBuilder getConfigBuilder(ConfigEntryBuilder entry)
     {

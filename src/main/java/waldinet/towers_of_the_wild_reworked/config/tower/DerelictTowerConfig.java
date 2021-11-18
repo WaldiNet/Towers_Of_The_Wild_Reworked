@@ -7,8 +7,8 @@ import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 
 public class DerelictTowerConfig
 {
-    private boolean enabled = true;
-    private int rarity = 72;
+    public boolean enabled = true;
+    public int rarity = 72;
 
     public static SubCategoryBuilder getConfigBuilder(ConfigEntryBuilder entry)
     {
