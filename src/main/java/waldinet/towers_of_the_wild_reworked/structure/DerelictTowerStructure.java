@@ -5,13 +5,13 @@ import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 
-public class DerelictTowerStructure extends AbstractTowerStructure
+public class DerelictTowerStructure extends TowerStructure
 {
     public DerelictTowerStructure()
     {
         super(18);
     }
-    
+
     @Override
     protected boolean isFlatTerrain(ChunkGenerator chunkGenerator, ChunkPos chunkPos, HeightLimitView world)
     {

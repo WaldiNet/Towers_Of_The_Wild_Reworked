@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "towers_of_the_wild_reworked",
-  "version": "${version}",
+  "version": "1.0.0",
   "name": "Towers of the Wild: Reworked",
   "description": "Adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild.",
   "authors": [

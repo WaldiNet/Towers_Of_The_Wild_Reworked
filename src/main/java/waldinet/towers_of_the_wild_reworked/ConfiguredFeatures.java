@@ -10,8 +10,8 @@ import waldinet.towers_of_the_wild_reworked.utils.RegUtils;
 public class ConfiguredFeatures
 {
     //#region Configured Structures
-    public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> DERELICT_TOWER = RegUtils.config(TowersOfTheWildReworked.DERELICT_TOWER, DerelictTowerGenerator.STARTING_POOL);
     public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> DERELICT_GRASS_TOWER = RegUtils.config(TowersOfTheWildReworked.DERELICT_GRASS_TOWER, DerelictGrassTowerGenerator.STARTING_POOL);
+    public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> DERELICT_TOWER = RegUtils.config(TowersOfTheWildReworked.DERELICT_TOWER, DerelictTowerGenerator.STARTING_POOL);
     public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> ICE_TOWER = RegUtils.config(TowersOfTheWildReworked.ICE_TOWER, IceTowerGenerator.STARTING_POOL);
     public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> JUNGLE_TOWER = RegUtils.config(TowersOfTheWildReworked.JUNGLE_TOWER, JungleTowerGenerator.STARTING_POOL);
     public static final ConfiguredStructureFeature<StructurePoolFeatureConfig, ?> OCEAN_TOWER = RegUtils.config(TowersOfTheWildReworked.OCEAN_TOWER, OceanTowerGenerator.STARTING_POOL);

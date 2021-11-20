@@ -5,10 +5,10 @@
             "item": "minecraft:ice"
         },
         "title": {
-            "translate": "ice_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.ice_tower.title"
         },
         "description": {
-            "translate": "ice_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.ice_tower.description"
         },
         "frame": "task",
         "show_toast": true,

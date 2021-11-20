@@ -17,24 +17,24 @@ public class JungleTowerGenerator
     static {
         STARTING_POOL = StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "jungle_bottom"),
+                new Identifier(TowersOfTheWildReworked.MOD_ID, "jungle_bottom"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":jungle/jungle_tower_bottom"), 1)
+                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":jungle/jungle_tower_bottom"), 1)
                 ),
-                StructurePool.Projection.TERRAIN_MATCHING
+                StructurePool.Projection.RIGID
             )  
         );
 
         StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "jungle_top"),
+                new Identifier(TowersOfTheWildReworked.MOD_ID, "jungle_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
                     new Pair<>(
                         ModUtils.waystonesInstalled()
-                        ? StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":jungle/waystone_jungle_tower_top")
-                        : StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":jungle/jungle_tower_top")
+                        ? StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":jungle/waystone_jungle_tower_top")
+                        : StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":jungle/jungle_tower_top")
                     , 1)
                 ),
                 StructurePool.Projection.RIGID

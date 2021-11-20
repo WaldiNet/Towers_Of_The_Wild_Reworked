@@ -7,13 +7,27 @@ import net.minecraft.util.ActionResult;
 
 public final class ConfigManager
 {
-    private static ConfigManager _instance;
-    private static TowersOfTheWildReworkedConfig _config;
+    private static ConfigManager _instance = null;
+    private static TowersOfTheWildReworkedConfig _config = null;
 
     public ConfigManager()
     {
         AutoConfig.register(TowersOfTheWildReworkedConfig.class, Toml4jConfigSerializer::new);
-        AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).load();
+
+        AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, newData) -> {
+            _config = newData;
+            TowersOfTheWildReworked.LOGGER.info(newData);
+            return ActionResult.SUCCESS;
+        });
+
+        AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, data) -> {
+            _config = data;
+            TowersOfTheWildReworked.LOGGER.info(data);
+            return ActionResult.SUCCESS;
+        });
+
+        saveConfig();
+
         TowersOfTheWildReworked.LOGGER.info("Config loaded!");
     }
 
@@ -28,16 +42,14 @@ public final class ConfigManager
 
     public TowersOfTheWildReworkedConfig getConfig()
     {
-        return AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).getConfig();
+        if (_config == null) {
+            _config = AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).getConfig();
+        }
+        return _config;
     }
 
     public void saveConfig()
     {
-        // AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, configObject) -> {
-        //     _config = configObject;
-        //     return ActionResult.PASS;
-        // });
-
         AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).save();
     }
 }

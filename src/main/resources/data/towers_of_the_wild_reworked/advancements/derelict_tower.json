@@ -5,10 +5,10 @@
             "item": "minecraft:stone_bricks"
         },
         "title": {
-            "translate": "derelict_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.derelict_tower.title"
         },
         "description": {
-            "translate": "derelict_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.derelict_tower.description"
         },
         "frame": "task",
         "show_toast": true,

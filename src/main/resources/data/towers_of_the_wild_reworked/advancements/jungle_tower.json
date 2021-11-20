@@ -5,10 +5,10 @@
             "item": "minecraft:stone_bricks"
         },
         "title": {
-            "translate": "jungle_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.jungle_tower.title"
         },
         "description": {
-            "translate": "jungle_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.jungle_tower.description"
         },
         "frame": "task",
         "show_toast": true,

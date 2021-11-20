@@ -1,7 +1,5 @@
 package waldinet.towers_of_the_wild_reworked.config.screens;
 
-import java.util.Arrays;
-
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -34,7 +32,7 @@ public class ConfigScreen
     private static void buildConfig()
     {
         // Base Settings
-        _builder.setTitle(new TranslatableText("Towers of the Wild: Reworked"))
+        _builder.setTitle(new TranslatableText("mod.towers_of_the_wild_reworked.name"))
             .setDefaultBackgroundTexture(new Identifier("minecraft:textures/block/oak_planks.png"))
             .setSavingRunnable(() -> {
                 ConfigManager.getInstance().saveConfig();
@@ -50,42 +48,39 @@ public class ConfigScreen
         ConfigEntryBuilder entry = _builder.entryBuilder();
         ConfigCategory category = _builder.getOrCreateCategory(new TranslatableText("category."+TowersOfTheWildReworked.MOD_ID+".towers"));
 
-        category.addEntry(DerelictGrassTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(DerelictTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(IceTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(JungleTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(OceanTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(OceanWarmTowerConfig.getConfigBuilder(entry).build());
-        category.addEntry(RegularTowerConfig.getConfigBuilder(entry).build());
+        category.addEntry(DerelictGrassTowerConfig.getConfigBuilder(entry));
+        category.addEntry(DerelictTowerConfig.getConfigBuilder(entry));
+        category.addEntry(IceTowerConfig.getConfigBuilder(entry));
+        category.addEntry(JungleTowerConfig.getConfigBuilder(entry));
+        category.addEntry(OceanTowerConfig.getConfigBuilder(entry));
+        category.addEntry(OceanWarmTowerConfig.getConfigBuilder(entry));
+        category.addEntry(RegularTowerConfig.getConfigBuilder(entry));
 
-        /**
-         * Biome Blacklist
-         */
-        category.addEntry(
-            entry.startStrList(
-                new TranslatableText("Biome Blacklist"),
-                Arrays.asList(
-                    "minecraft:river",
-                    "minecraft:frozen_river",
-                    "minecraft:beach",
-                    "minecraft:stone_shore",
-                    "minecraft:snowy_beach",
-                    "biomesoplenty:gravel_beach",
-                    "biomesoplenty:white_beach"
-                )
-            ).setTooltip(new TranslatableText("A list of biomes where the towers will not spawn."))
-            .setDefaultValue(Arrays.asList("minecraft:river", "minecraft:beach"))
-            .build()
-        );
+        // subCategory.add(
+        //     entry.startStrList(
+        //         new TranslatableText("config.towers_of_the_wild_reworked.biome_blacklist"),
+        //         Arrays.asList(
+        //             "minecraft:river",
+        //             "minecraft:frozen_river",
+        //             "minecraft:beach",
+        //             "minecraft:stone_shore",
+        //             "minecraft:snowy_beach",
+        //             "biomesoplenty:gravel_beach",
+        //             "biomesoplenty:white_beach"
+        //         )
+        //     ).setTooltip(new TranslatableText("config.towers_of_the_wild_reworked.biome_blacklist.tooltip"))
+        //     .setDefaultValue(Arrays.asList("minecraft:river", "minecraft:beach"))
+        //     .build()
+        // );
 
         /**
          * Mod integrations
          */
-        SubCategoryBuilder modIntegrations = entry.startSubCategory(new TranslatableText("Mod Integrations"));
+        SubCategoryBuilder modIntegrations = entry.startSubCategory(new TranslatableText("config.towers_of_the_wild_reworked.mod_integration"));
         // Spawn with Waystone
         modIntegrations.add(
-            entry.startBooleanToggle(new TranslatableText("Spawn Waystones on top"), true)
-                .setTooltip(new TranslatableText("If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect."))
+            entry.startBooleanToggle(new TranslatableText("config.towers_of_the_wild_reworked.mod_integration.waystones"), true)
+                .setTooltip(new TranslatableText("config.towers_of_the_wild_reworked.mod_integration.waystones.tooltip"))
                 .setDefaultValue(true)
                 .build()
         );

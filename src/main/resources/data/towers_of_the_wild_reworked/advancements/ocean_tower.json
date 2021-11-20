@@ -5,10 +5,10 @@
             "item": "minecraft:stone_bricks"
         },
         "title": {
-            "translate": "ocean_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.ocean_tower.title"
         },
         "description": {
-            "translate": "ocean_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.ocean_tower.description"
         },
         "frame": "task",
         "show_toast": true,

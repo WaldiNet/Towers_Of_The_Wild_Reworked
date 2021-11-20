@@ -17,10 +17,10 @@ public class OceanTowerGenerator
     static {
         STARTING_POOL = StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "ocean_bottom"),
+                new Identifier(TowersOfTheWildReworked.MOD_ID, "ocean_bottom"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ocean/ocean_tower_bottom"), 1)
+                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean/ocean_tower_bottom"), 1)
                 ),
                 StructurePool.Projection.RIGID
             )  
@@ -28,13 +28,13 @@ public class OceanTowerGenerator
 
         StructurePools.register(
             new StructurePool(
-                new Identifier(TowersOfTheWildReworked.ORIGINAL_MOD_ID, "ocean_top"),
+                new Identifier(TowersOfTheWildReworked.MOD_ID, "ocean_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
                     new Pair<>(
                         ModUtils.waystonesInstalled()
-                        ? StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ocean/waystone_ocean_tower_top")
-                        : StructurePoolElement.ofSingle(TowersOfTheWildReworked.ORIGINAL_MOD_ID + ":ocean/ocean_tower_top")
+                        ? StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean/waystone_ocean_tower_top")
+                        : StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean/ocean_tower_top")
                     , 1)
                 ),
                 StructurePool.Projection.RIGID

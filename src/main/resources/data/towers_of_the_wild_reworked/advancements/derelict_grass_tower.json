@@ -5,10 +5,10 @@
             "item": "minecraft:grass"
         },
         "title": {
-            "translate": "derelict_grass_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.derelict_grass_tower.title"
         },
         "description": {
-            "translate": "derelict_grass_tower"
+            "translate": "advancements.towers_of_the_wild_reworked.derelict_grass_tower.description"
         },
         "frame": "task",
         "show_toast": true,

@@ -5,10 +5,10 @@
             "item": "minecraft:stone_bricks"
         },
         "title": {
-            "translate": "A breath of fresh air"
+            "translate": "advancements.towers_of_the_wild_reworked.regular_tower.title"
         },
         "description": {
-            "translate": "Fine...but how do I get up there?"
+            "translate": "advancements.towers_of_the_wild_reworked.regular_tower.description"
         },
         "frame": "task",
         "show_toast": true,

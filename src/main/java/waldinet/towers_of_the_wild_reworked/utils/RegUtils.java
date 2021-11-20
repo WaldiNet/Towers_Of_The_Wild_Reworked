@@ -18,7 +18,7 @@ import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 
 public class RegUtils
-{
+{    
     public static ConfiguredStructureFeature<StructurePoolFeatureConfig, ? extends StructureFeature<StructurePoolFeatureConfig>> config(
         StructureFeature<StructurePoolFeatureConfig> structureFeature,
         StructurePool structurePool

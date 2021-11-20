@@ -1,8 +1,8 @@
 package waldinet.towers_of_the_wild_reworked.structure;
 
-import net.minecraft.structure.MarginedStructureStart;
 import net.minecraft.structure.PoolStructurePiece;
 import net.minecraft.structure.StructureManager;
+import net.minecraft.structure.StructureStart;
 import net.minecraft.structure.pool.StructurePoolBasedGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -20,7 +20,7 @@ import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
 /**
  * Helper class to move all the IDs from former Structure classes
  */
-public class OceanTowerStructure extends AbstractTowerStructure
+public class OceanTowerStructure extends TowerStructure
 {
     public OceanTowerStructure()
     {
@@ -46,9 +46,9 @@ public class OceanTowerStructure extends AbstractTowerStructure
         StructurePoolFeatureConfig config,
         HeightLimitView world
     ) {
-        if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
-            return false;
-        }
+        // if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
+        //     return false;
+        // }
 
         int x = pos.x * 16;
         int z = pos.z * 16;
@@ -57,7 +57,7 @@ public class OceanTowerStructure extends AbstractTowerStructure
         return oceanFloor <= 38;
     }
 
-    public static class Start extends MarginedStructureStart<StructurePoolFeatureConfig>
+    public static class Start extends StructureStart<StructurePoolFeatureConfig>
     {
         //#region Constructor
         public Start(StructureFeature<StructurePoolFeatureConfig> structureFeature, ChunkPos chunkPos, int i, long l)

@@ -1,25 +1,44 @@
 {
-    "Towers of the Wild: Reworked": "Towers of the Wild: Reworked",
-    "category.towers_of_the_wild_reworked.towers": "",
-    
-    "A list of biomes where the towers will not spawn.": "A list of biomes where the towers will not spawn.",
-
-    "Enabled": "Enabled",
-    "Rarity": "Rarity",
-    "How rarely this tower type will spawn (low: common, high: rare)": "How rarely this tower type will spawn (low: common, high: rare)",
-
-    "Derelict Grass Tower": "Derelict Grass Tower",
-    "Derelict Tower": "Derelict Tower",
-    "Ice Tower": "Ice Tower",
-    "Jungle Tower": "Jungle Tower",
-    "Ocean Tower": "Ocean Tower",
-    "Ocean Warm Tower": "Ocean Warm Tower",
-    "Regular Tower": "Regular Tower",
-
-    "Mod Integrations": "Mod Integrations",
-    "Spawn Waystones on top": "Spawn Waystones on top",
-    "If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect.": "If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect.",
+    "mod.towers_of_the_wild_reworked.name": "Towers of the Wild: Reworked",
 
     "modmenu.original_source": "Original Source",
-    "modmenu.descriptionTranslation.towers_of_the_wild_reworked": "Adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild."
+    "modmenu.summaryTranslation.towers_of_the_wild_reworked": "Cool towers to enhance exploration!",
+    "modmenu.descriptionTranslation.towers_of_the_wild_reworked": "Adds tall towers in your world, inspired by The Legend Of Zelda: Breath Of The Wild.",
+
+    "advancements.towers_of_the_wild_reworked.root.title": "Towers of the Wild: Reworked",
+    "advancements.towers_of_the_wild_reworked.root.description": "Are you able to climb all Towers?",
+    "advancements.towers_of_the_wild_reworked.derelict_grass_tower.title": "derelict_grass_tower",
+    "advancements.towers_of_the_wild_reworked.derelict_grass_tower.description": "derelict_grass_tower",
+    "advancements.towers_of_the_wild_reworked.derelict_tower.title": "derelict_tower",
+    "advancements.towers_of_the_wild_reworked.derelict_tower.description": "derelict_tower",
+    "advancements.towers_of_the_wild_reworked.ice_tower.title": "ice_tower",
+    "advancements.towers_of_the_wild_reworked.ice_tower.description": "ice_tower",
+    "advancements.towers_of_the_wild_reworked.jungle_tower.title": "jungle_tower",
+    "advancements.towers_of_the_wild_reworked.jungle_tower.description": "jungle_tower",
+    "advancements.towers_of_the_wild_reworked.ocean_tower.title": "ocean_tower",
+    "advancements.towers_of_the_wild_reworked.ocean_tower.description": "ocean_tower",
+    "advancements.towers_of_the_wild_reworked.ocean_warm_tower.title": "ocean_warm_tower",
+    "advancements.towers_of_the_wild_reworked.ocean_warm_tower.description": "ocean_warm_tower",
+    "advancements.towers_of_the_wild_reworked.regular_tower.title": "A breath of fresh air",
+    "advancements.towers_of_the_wild_reworked.regular_tower.description": "Fine...but how do I get up there?",
+
+    "config.towers_of_the_wild_reworked.tower_active": "Active",
+    "config.towers_of_the_wild_reworked.tower_spacing": "Spacing",
+    "config.towers_of_the_wild_reworked.tower_spacing.tooltip": "The spacing between each tower (low: common, high: rare)",
+
+    "config.towers_of_the_wild_reworked.derelict_grass": "Derelict Grass Tower",
+    "config.towers_of_the_wild_reworked.derelict": "Derelict Tower",
+    "config.towers_of_the_wild_reworked.ice": "Ice Tower",
+    "config.towers_of_the_wild_reworked.jungle": "Jungle Tower",
+    "config.towers_of_the_wild_reworked.ocean": "Ocean Tower",
+    "config.towers_of_the_wild_reworked.ocean_warm": "Ocean Warm Tower",
+    "config.towers_of_the_wild_reworked.regular": "Regular Tower",
+
+    "category.towers_of_the_wild_reworked.towers": "",
+    "config.towers_of_the_wild_reworked.biome_blacklist": "",
+    "config.towers_of_the_wild_reworked.biome_blacklist.tooltip": "A list of biomes where the towers will not spawn.",
+
+    "config.towers_of_the_wild_reworked.mod_integration": "Mod Integrations",
+    "config.towers_of_the_wild_reworked.mod_integration.waystones": "Spawn Waystones on top",
+    "config.towers_of_the_wild_reworked.mod_integration.waystones.tooltip": "If the Waytones mod is installed and this is set to true, towers will spawn with a waystone at the top. If the Waystone mod is not installed, this will have no effect."
 }
