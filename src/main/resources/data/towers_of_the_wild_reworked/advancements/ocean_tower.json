@@ -20,7 +20,7 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "location": {
-                    "feature": "towers_of_the_wild_reworked:ocean_tower"
+                    "feature": "towers_of_the_wild:ocean_tower"
                 }
             }
         }

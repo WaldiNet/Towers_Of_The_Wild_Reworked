@@ -20,7 +20,7 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "location": {
-                    "feature": "towers_of_the_wild_reworked:ice_tower"
+                    "feature": "towers_of_the_wild:ice_tower"
                 }
             }
         }

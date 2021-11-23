@@ -20,7 +20,7 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "location": {
-                    "feature": "towers_of_the_wild_reworked:regular_tower"
+                    "feature": "towers_of_the_wild:regular_tower"
                 }
             }
         }
