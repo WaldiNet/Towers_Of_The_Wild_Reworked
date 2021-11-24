@@ -2,7 +2,7 @@
     "parent": "towers_of_the_wild_reworked:root",
     "display": {
         "icon": {
-            "item": "minecraft:stone_bricks"
+            "item": "minecraft:tropical_fish_bucket"
         },
         "title": {
             "translate": "advancements.towers_of_the_wild_reworked.ocean_warm_tower.title"

@@ -2,7 +2,7 @@
     "parent": "towers_of_the_wild_reworked:root",
     "display": {
         "icon": {
-            "item": "minecraft:stone_bricks"
+            "item": "minecraft:diamond_sword"
         },
         "title": {
             "translate": "advancements.towers_of_the_wild_reworked.regular_tower.title"

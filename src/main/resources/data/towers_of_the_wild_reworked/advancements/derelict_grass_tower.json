@@ -2,7 +2,7 @@
     "parent": "towers_of_the_wild_reworked:root",
     "display": {
         "icon": {
-            "item": "minecraft:grass"
+            "item": "minecraft:mossy_cobblestone"
         },
         "title": {
             "translate": "advancements.towers_of_the_wild_reworked.derelict_grass_tower.title"

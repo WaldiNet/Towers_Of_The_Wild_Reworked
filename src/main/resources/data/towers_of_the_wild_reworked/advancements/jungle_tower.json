@@ -2,7 +2,7 @@
     "parent": "towers_of_the_wild_reworked:root",
     "display": {
         "icon": {
-            "item": "minecraft:stone_bricks"
+            "item": "minecraft:vine"
         },
         "title": {
             "translate": "advancements.towers_of_the_wild_reworked.jungle_tower.title"
