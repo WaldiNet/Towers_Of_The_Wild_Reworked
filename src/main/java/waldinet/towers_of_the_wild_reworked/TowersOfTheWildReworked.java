@@ -35,7 +35,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 	public static final StructureFeature<StructurePoolFeatureConfig> REGULAR_TOWER = new TowerStructure(5);
 	//#endregion
 
-	private TowersOfTheWildReworkedConfig _config;
+	// private TowersOfTheWildReworkedConfig _config;
 
 	@Override
 	public void onInitialize()
@@ -43,7 +43,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 		LOGGER.info("Initializing...");
 
 		// Loading config
-		_config = ConfigManager.getInstance().getConfig();
+		// _config = ConfigManager.getInstance().getConfig();
 
 		// Registering Structures and Features
 		registerStructures();
@@ -65,13 +65,13 @@ public class TowersOfTheWildReworked implements ModInitializer
 		LOGGER.info("Registering structures...");
 
 		// https://github.dev/frqnny/mostructures
-		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, _config.derelictTower.spacing, 8, 1689780);
-		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, ConfiguredFeatures.DERELICT_GRASS_TOWER, _config.derelictGrassTower.spacing, 8, 1689781);
-		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, ConfiguredFeatures.ICE_TOWER, _config.iceTower.spacing, 8, 1689779);
-		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, ConfiguredFeatures.JUNGLE_TOWER, _config.jungleTower.spacing, 8, 1689778);
-		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, ConfiguredFeatures.OCEAN_TOWER, _config.oceanTower.spacing, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, ConfiguredFeatures.OCEAN_WARM_TOWER, _config.oceanWarmTower.spacing, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, ConfiguredFeatures.REGULAR_TOWER, _config.regularTower.spacing, 8, 1689777);
+		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, 72, 8, 1689780);
+		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, ConfiguredFeatures.DERELICT_GRASS_TOWER, 72, 8, 1689781);
+		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, ConfiguredFeatures.ICE_TOWER, 20, 8, 1689779);
+		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, ConfiguredFeatures.JUNGLE_TOWER, 20, 8, 1689778);
+		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, ConfiguredFeatures.OCEAN_TOWER, 32, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, ConfiguredFeatures.OCEAN_WARM_TOWER, 32, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, ConfiguredFeatures.REGULAR_TOWER, 20, 8, 1689777);
 
 		LOGGER.info("Registration finished!");
 	}
@@ -85,7 +85,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 			StructUtils.DERELICT_GRASS_TOWER,
 			BiomeSelectors
 			.categories(Category.TAIGA, Category.EXTREME_HILLS, Category.PLAINS, Category.SAVANNA, Category.FOREST, Category.SWAMP, Category.MUSHROOM)
-			.and(RegUtils.booleanToPredicate(_config.derelictGrassTower.active))
+			// .and(RegUtils.booleanToPredicate(_config.derelictGrassTower.active))
 			.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.DERELICT_GRASS_TOWER)
 		);
@@ -106,7 +106,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 			StructUtils.ICE_TOWER,
 			BiomeSelectors
 				.categories(Category.ICY)
-				.and(RegUtils.booleanToPredicate(_config.iceTower.active))
+				// .and(RegUtils.booleanToPredicate(_config.iceTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.ICE_TOWER)
 		);
@@ -116,7 +116,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 			StructUtils.JUNGLE_TOWER,
 			BiomeSelectors
 				.categories(Category.JUNGLE)
-				.and(RegUtils.booleanToPredicate(_config.jungleTower.active))
+				// .and(RegUtils.booleanToPredicate(_config.jungleTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.JUNGLE_TOWER)
 		);
@@ -130,7 +130,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 					String string = context.getBiomeKey().getValue().toString();
                     return !string.contains("deep") && !string.contains("frozen");
 				})
-				.and(RegUtils.booleanToPredicate(_config.oceanTower.active))
+				// .and(RegUtils.booleanToPredicate(_config.oceanTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.OCEAN_TOWER)
 		);
@@ -143,8 +143,8 @@ public class TowersOfTheWildReworked implements ModInitializer
 				.and((context) -> {
 					String string = context.getBiomeKey().getValue().toString();
                     return string.equals("minecraft:warm_ocean");
-				})
-				.and(RegUtils.booleanToPredicate(_config.oceanWarmTower.active)),
+				}),
+				// .and(RegUtils.booleanToPredicate(_config.oceanWarmTower.active)),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.OCEAN_WARM_TOWER)
 		);
 
@@ -153,7 +153,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 			StructUtils.REGULAR_TOWER,
 			BiomeSelectors
 				.categories(Category.TAIGA, Category.EXTREME_HILLS, Category.MESA, Category.PLAINS, Category.SAVANNA, Category.FOREST, Category.DESERT, Category.SWAMP, Category.MUSHROOM)
-				.and(RegUtils.booleanToPredicate(_config.regularTower.active))
+				// .and(RegUtils.booleanToPredicate(_config.regularTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.REGULAR_TOWER)
 		);
