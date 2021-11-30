@@ -16,19 +16,17 @@ public final class ConfigManager
 
         AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, newData) -> {
             _config = newData;
-            TowersOfTheWildReworked.LOGGER.info(newData);
             return ActionResult.SUCCESS;
         });
 
         AutoConfig.getConfigHolder(TowersOfTheWildReworkedConfig.class).registerLoadListener((configHolder, data) -> {
             _config = data;
-            TowersOfTheWildReworked.LOGGER.info(data);
             return ActionResult.SUCCESS;
         });
 
         saveConfig();
 
-        TowersOfTheWildReworked.LOGGER.info("Config loaded!");
+        TowersOfTheWildReworked.Log("Config loaded!");
     }
 
     public static ConfigManager getInstance()

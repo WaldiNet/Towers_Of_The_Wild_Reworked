@@ -1,5 +1,7 @@
 package waldinet.towers_of_the_wild_reworked.structure;
 
+import java.util.Arrays;
+
 import net.minecraft.structure.PoolStructurePiece;
 import net.minecraft.structure.StructureManager;
 import net.minecraft.structure.StructureStart;
@@ -17,6 +19,7 @@ import net.minecraft.world.gen.chunk.StructureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
+import waldinet.towers_of_the_wild_reworked.generator.DerelictGrassTowerGenerator;
 import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
 
 /**
@@ -73,26 +76,30 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
         // }
 
         StructureConfig configDerelictGrass = chunkGenerator.getStructuresConfig().getForType(TowersOfTheWildReworked.DERELICT_GRASS_TOWER);
-        // StructureConfig configDerelict = chunkGenerator.getStructuresConfig().getForType(TowersOfTheWildReworked.DERELICT_TOWER);
+        StructureConfig configDerelict = chunkGenerator.getStructuresConfig().getForType(TowersOfTheWildReworked.DERELICT_TOWER);
 
         // Check chunks if there already are towers present
         for (int chunkX = pos.x - 6; chunkX <= pos.x + 6; ++chunkX) {
             for (int chunkZ = pos.z - 6; chunkZ <= pos.z + 6; ++chunkZ) {
-                // Derelict Grass
-                if (configDerelictGrass != null) {
-                    ChunkPos possibleDerelictGrassPos = TowersOfTheWildReworked.DERELICT_GRASS_TOWER.getStartChunk(configDerelictGrass, worldSeed, random, chunkX, chunkZ);
-                    if (chunkX == possibleDerelictGrassPos.x && chunkZ == possibleDerelictGrassPos.z && this != TowersOfTheWildReworked.DERELICT_GRASS_TOWER) {
-                        return false;
-                    }
-                }
-
                 // Derelict
-                // if (configDerelict != null) {
-                //     ChunkPos possibleDerelictPos = TowersOfTheWildReworked.DERELICT_TOWER.getStartChunk(configDerelict, worldSeed, random, chunkX, chunkZ);
-                //     if (chunkX == possibleDerelictPos.x && chunkZ == possibleDerelictPos.z && this != TowersOfTheWildReworked.DERELICT_TOWER) {
-                //         return false;
-                //     }
-                // }
+                if (configDerelictGrass != null && configDerelict != null) {
+                    boolean isDerelict = Arrays.asList(DerelictGrassTowerGenerator.BIOME_CATEGORIES).contains(biome.getCategory());
+
+                    // Derelict
+                    if (isDerelict) {
+                        ChunkPos possiblePos = TowersOfTheWildReworked.DERELICT_GRASS_TOWER.getStartChunk(configDerelictGrass, worldSeed, random, chunkX, chunkZ);
+                        if (chunkX == possiblePos.x && chunkZ == possiblePos.z && this != TowersOfTheWildReworked.DERELICT_GRASS_TOWER) {
+                            return false;
+                        }
+                    // Derelict Grass
+                    } else {
+                        ChunkPos possiblePos = TowersOfTheWildReworked.DERELICT_TOWER.getStartChunk(configDerelict, worldSeed, random, chunkX, chunkZ);
+                        if (chunkX == possiblePos.x && chunkZ == possiblePos.z && this != TowersOfTheWildReworked.DERELICT_TOWER) {
+                            return false;
+                        }
+                    }
+
+                }
             }
         }
 
@@ -143,7 +150,6 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
 
             int x = pos.x * 16;
             int z = pos.z * 16;
-            // int y = chunkGenerator.getHeight(x, z, Heightmap.Type.WORLD_SURFACE_WG, world) + 10;
             int y = 1;
 
             StructUtils.initPools();

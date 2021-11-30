@@ -7,12 +7,19 @@ import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
-public class DerelictTowerGenerator
+public class DerelictTowerGenerator extends AbstractTowerGenerator
 {
     public static final StructurePool STARTING_POOL;
+
+    public static Biome.Category[] BIOME_CATEGORIES = new Biome.Category[]{
+        Biome.Category.MESA,  
+        Biome.Category.DESERT,  
+        Biome.Category.ICY,  
+    };
     
     static {
         STARTING_POOL = StructurePools.register(
@@ -40,10 +47,5 @@ public class DerelictTowerGenerator
                 StructurePool.Projection.RIGID
             )  
         );
-    }
-
-    public static void init()
-    {
-        // nth
     }
 }

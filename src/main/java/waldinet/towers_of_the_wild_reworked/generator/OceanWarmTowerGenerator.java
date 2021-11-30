@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
-public class OceanWarmTowerGenerator
+public class OceanWarmTowerGenerator extends AbstractTowerGenerator
 {
     public static final StructurePool STARTING_POOL;
     
@@ -40,10 +40,5 @@ public class OceanWarmTowerGenerator
                 StructurePool.Projection.RIGID
             )  
         );
-    }
-
-    public static void init()
-    {
-        // nth
     }
 }

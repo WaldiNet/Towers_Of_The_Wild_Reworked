@@ -35,7 +35,7 @@ public class RegUtils
             selectorPredicate,
             biomeAdditionConsumer
         );
-        TowersOfTheWildReworked.LOGGER.info(String.format("Loaded structure: '%s'", id));
+        TowersOfTheWildReworked.Log(String.format("Loaded structure: '%s'", id));
     }
 
     public static void addStructure(BiomeModificationContext context, ConfiguredStructureFeature<?, ?> feature)
@@ -67,7 +67,7 @@ public class RegUtils
         }
         builder.register();
 
-        TowersOfTheWildReworked.LOGGER.info(String.format("Registered structure: '%s'", id));
+        TowersOfTheWildReworked.Log(String.format("Registered structure: '%s'", id));
     }
 
     public static <FC extends FeatureConfig, S extends StructureFeature<FC>> void registerStructure(

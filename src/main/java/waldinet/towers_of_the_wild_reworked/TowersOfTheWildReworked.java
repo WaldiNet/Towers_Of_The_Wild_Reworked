@@ -9,6 +9,11 @@ import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
 import waldinet.towers_of_the_wild_reworked.config.TowersOfTheWildReworkedConfig;
+import waldinet.towers_of_the_wild_reworked.generator.DerelictGrassTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.DerelictTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.IceTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.JungleTowerGenerator;
+import waldinet.towers_of_the_wild_reworked.generator.RegularTowerGenerator;
 import waldinet.towers_of_the_wild_reworked.structure.*;
 import waldinet.towers_of_the_wild_reworked.utils.RegUtils;
 import waldinet.towers_of_the_wild_reworked.utils.StructUtils;
@@ -26,8 +31,8 @@ public class TowersOfTheWildReworked implements ModInitializer
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
 	//#region Structures
-	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_TOWER = new DerelictTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_GRASS_TOWER = new DerelictTowerStructure();
+	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_TOWER = new DerelictTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> ICE_TOWER = new TowerStructure(9);
 	public static final StructureFeature<StructurePoolFeatureConfig> JUNGLE_TOWER = new TowerStructure(7);
 	public static final StructureFeature<StructurePoolFeatureConfig> OCEAN_TOWER = new OceanTowerStructure();
@@ -40,7 +45,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		LOGGER.info("Initializing...");
+		Log("Initializing...");
 
 		// Loading config
 		// _config = ConfigManager.getInstance().getConfig();
@@ -52,7 +57,12 @@ public class TowersOfTheWildReworked implements ModInitializer
 		// Adding to biomes
 		putStructures();
 
-		LOGGER.info("Initializing finished!");
+		Log("Initializing finished!");
+	}
+
+	public static void Log(String message)
+	{
+		LOGGER.info(String.format("[Towers of the Wild: Reworked] %s", message));
 	}
 
 	public static Identifier id(String name)
@@ -62,50 +72,49 @@ public class TowersOfTheWildReworked implements ModInitializer
 
 	private void registerStructures()
 	{
-		LOGGER.info("Registering structures...");
+		Log("Registering structures...");
 
 		// https://github.dev/frqnny/mostructures
-		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, 72, 8, 1689780);
 		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, ConfiguredFeatures.DERELICT_GRASS_TOWER, 72, 8, 1689781);
+		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, 72, 8, 1689780);
 		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, ConfiguredFeatures.ICE_TOWER, 20, 8, 1689779);
 		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, ConfiguredFeatures.JUNGLE_TOWER, 20, 8, 1689778);
 		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, ConfiguredFeatures.OCEAN_TOWER, 32, 8, 1689782);
 		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, ConfiguredFeatures.OCEAN_WARM_TOWER, 32, 8, 1689782);
 		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, ConfiguredFeatures.REGULAR_TOWER, 20, 8, 1689777);
 
-		LOGGER.info("Registration finished!");
+		Log("Registration finished!");
 	}
 
 	private void putStructures()
 	{
-		LOGGER.info("Loading active structures...");
+		Log("Loading active structures...");
 
 		// Derelict Grass
 		RegUtils.addToBiome(
 			StructUtils.DERELICT_GRASS_TOWER,
 			BiomeSelectors
-			.categories(Category.TAIGA, Category.EXTREME_HILLS, Category.PLAINS, Category.SAVANNA, Category.FOREST, Category.SWAMP, Category.MUSHROOM)
-			// .and(RegUtils.booleanToPredicate(_config.derelictGrassTower.active))
-			.and(BiomeSelectors.foundInOverworld()),
+				.categories(DerelictGrassTowerGenerator.BIOME_CATEGORIES)
+				// .and(RegUtils.booleanToPredicate(_config.derelictGrassTower.active))
+				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.DERELICT_GRASS_TOWER)
 		);
 
 		// Derelict
-		// TODO: Not spawning
-		// RegUtils.addToBiome(
-		// 	StructUtils.DERELICT_TOWER,
-		// 	BiomeSelectors
-		// 		.categories(Category.MESA, Category.DESERT, Category.ICY)
-		// 		.and(RegUtils.booleanToPredicate(_config.derelictTower.active))
-		// 		.and(BiomeSelectors.foundInOverworld()),
-		// 	(context) -> RegUtils.addStructure(context, ConfiguredFeatures.DERELICT_TOWER)
-		// );
+		RegUtils.addToBiome(
+			StructUtils.DERELICT_TOWER,
+			BiomeSelectors
+				.categories(DerelictTowerGenerator.BIOME_CATEGORIES)
+				// .and(RegUtils.booleanToPredicate(_config.derelictTower.active))
+				.and(BiomeSelectors.foundInOverworld()),
+			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.DERELICT_TOWER)
+		);
 
 		// Ice
 		RegUtils.addToBiome(
 			StructUtils.ICE_TOWER,
 			BiomeSelectors
-				.categories(Category.ICY)
+				.categories(IceTowerGenerator.BIOME_CATEGORIES)
 				// .and(RegUtils.booleanToPredicate(_config.iceTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.ICE_TOWER)
@@ -115,7 +124,7 @@ public class TowersOfTheWildReworked implements ModInitializer
 		RegUtils.addToBiome(
 			StructUtils.JUNGLE_TOWER,
 			BiomeSelectors
-				.categories(Category.JUNGLE)
+				.categories(JungleTowerGenerator.BIOME_CATEGORIES)
 				// .and(RegUtils.booleanToPredicate(_config.jungleTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.JUNGLE_TOWER)
@@ -152,12 +161,12 @@ public class TowersOfTheWildReworked implements ModInitializer
 		RegUtils.addToBiome(
 			StructUtils.REGULAR_TOWER,
 			BiomeSelectors
-				.categories(Category.TAIGA, Category.EXTREME_HILLS, Category.MESA, Category.PLAINS, Category.SAVANNA, Category.FOREST, Category.DESERT, Category.SWAMP, Category.MUSHROOM)
+				.categories(RegularTowerGenerator.BIOME_CATEGORIES)
 				// .and(RegUtils.booleanToPredicate(_config.regularTower.active))
 				.and(BiomeSelectors.foundInOverworld()),
 			(context) -> RegUtils.addStructure(context, ConfiguredFeatures.REGULAR_TOWER)
 		);
 		
-		LOGGER.info("Loading active structures finished!");
+		Log("Loading active structures finished!");
 	}
 }
