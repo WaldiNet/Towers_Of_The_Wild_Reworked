@@ -64,7 +64,7 @@ This mod does not add any blocks or items to the game (if that matters to you).
 * Minecraft 1.17.1
 * [Fabric Loader](https://fabricmc.net/use/) 0.12.5 or higher
 * [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) inside your `.minecraft/mods` directory
-* [Cloth Config API (Fabric)](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
+<!-- * [Cloth Config API (Fabric)](https://www.curseforge.com/minecraft/mc-mods/cloth-config) -->
 
 Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
 
@@ -72,7 +72,7 @@ Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
 If you also want to use [Waystones](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) you'll also need the [Balm](https://www.curseforge.com/minecraft/mc-mods/balm-fabric) mod.
 
 ## How to configure
-Coming soon.
+Will be implemented in a later build
 <!-- You can either use the file under `.minecraft/config/towers_of_the_wild_reworked.toml` or use the integrated mod menu *(requires [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) mod)*.
 
 **Note:**
