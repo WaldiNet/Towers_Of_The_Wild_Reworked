@@ -1,5 +1,7 @@
 # Towers of the Wild: Reworked <!-- omit in toc -->
 [![build](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml)
+[![Teamspeak](https://img.shields.io/badge/Talk%20on-Teamspeak-informational?style=flat&logo=teamspeak&logoColor=white&color=08428C)](ts3server://ts3.waldinet.de)
+[![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/9Y8pCWR5tw)
 
 This mod is based on the popular Forge Mod [Towers of the Wild](https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild), 
 so all credits go to the original Author [idrae](https://www.curseforge.com/members/idrae_).
@@ -14,14 +16,13 @@ Have fun using this mod!
   * [Features](#features)
 * [How to install](#how-to-install)
 * [How to configure](#how-to-configure)
-* [Credits](#credits)
 
 
 ## Getting started
 ![Environment](https://img.shields.io/badge/environment-Client%20and%20Server-informational?style=flat)
 ![Modloader](https://img.shields.io/badge/modloader-Fabric-informational?style=flat)
+![Teamspeak](https://img.shields.io/badge/compatibile%20with-1.17.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
 [![Github SourceCode](https://img.shields.io/badge/SourceCode%20on-Github-informational?style=flat&logo=github&logoColor=white&color=3A414A)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked)
-[![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/9Y8pCWR5tw)
 
 This mod adds tall towers in your world, inspired by **The Legend Of Zelda: Breath Of The Wild**.
 
@@ -54,9 +55,9 @@ This mod does not add any blocks or items to the game (if that matters to you).
 * If [Waystone](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) mod is active, waystones can spawn on top of each tower!
 * Multiple Tower types *(derelict, derelict_grass, ice, jungle, ocean, ocean_warm, regular)*
 * Advancements for every tower *(Can you climb all of them?)*
-* In-game Mod Menu
-  * Individually (de-)activate Tower types
-  * Adjustable spacing between Towers
+* ~~In-game Mod Menu~~ *(will be implemented in a later build)*
+  * ~~Individually (de-)activate Tower types~~
+  * ~~Adjustable spacing between Towers~~
 
 ## How to install
 **Prerequisite:**
@@ -71,7 +72,8 @@ Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
 If you also want to use [Waystones](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) you'll also need the [Balm](https://www.curseforge.com/minecraft/mc-mods/balm-fabric) mod.
 
 ## How to configure
-You can either use the file under `.minecraft/config/towers_of_the_wild_reworked.toml` or use the integrated mod menu *(requires [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) mod)*.
+Coming soon.
+<!-- You can either use the file under `.minecraft/config/towers_of_the_wild_reworked.toml` or use the integrated mod menu *(requires [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) mod)*.
 
 **Note:**
 If you are using the mod menu you need to restart the game in order for the changes to take effect.
@@ -85,4 +87,4 @@ If you are using the mod menu you need to restart the game in order for the chan
 
 
 ## Credits
-* [idrae](https://github.com/Idrae) *(original author)*
+* [idrae](https://github.com/Idrae) *(original author)* -->

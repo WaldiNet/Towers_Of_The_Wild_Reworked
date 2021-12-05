@@ -7,8 +7,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
-import waldinet.towers_of_the_wild_reworked.config.ConfigManager;
-import waldinet.towers_of_the_wild_reworked.config.TowersOfTheWildReworkedConfig;
 import waldinet.towers_of_the_wild_reworked.generator.DerelictGrassTowerGenerator;
 import waldinet.towers_of_the_wild_reworked.generator.DerelictTowerGenerator;
 import waldinet.towers_of_the_wild_reworked.generator.IceTowerGenerator;
@@ -46,9 +44,6 @@ public class TowersOfTheWildReworked implements ModInitializer
 	public void onInitialize()
 	{
 		Log("Initializing...");
-
-		// Loading config
-		// _config = ConfigManager.getInstance().getConfig();
 
 		// Registering Structures and Features
 		registerStructures();
