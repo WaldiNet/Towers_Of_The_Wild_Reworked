@@ -4,7 +4,7 @@
 [![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/9Y8pCWR5tw)
 
 This mod is based on the popular Forge Mod [Towers of the Wild](https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild), 
-so all credits go to the original Author [idrae](https://www.curseforge.com/members/idrae_).
+so all credits go to the original Author [idrae_](https://www.curseforge.com/members/idrae_).
 
 We really wanted to use this mod on 1.17+ so we decided to port it.
 Because of some other compatibilities we choose the [Fabric Mod Loader](https://fabricmc.net/) and now, here we are! :)
@@ -16,6 +16,7 @@ Have fun using this mod!
   * [Features](#features)
 * [How to install](#how-to-install)
 * [How to configure](#how-to-configure)
+* [Credits](#credits)
 
 
 ## Getting started
@@ -36,17 +37,17 @@ Plus, it is also compatible with the [Waystones](https://www.curseforge.com/mine
 
 This mod does not add any blocks or items to the game (if that matters to you).
 
-![Tower Showcase 1](/src/main/resources/assets/img/showcase_1.png)
-![Tower Showcase 2](/src/main/resources/assets/img/showcase_2.png)
+![Tower Showcase 1](/img/showcase_1.png)
+![Tower Showcase 2](/img/showcase_2.png)
 
 <details>
   <summary><b>More images:</b></summary>
 
-  ![Tower Showcase 3](/src/main/resources/assets/img/showcase_3.png)
-  ![Tower Showcase 4](/src/main/resources/assets/img/showcase_4.png)
-  ![Tower Showcase 5](/src/main/resources/assets/img/showcase_5.png)
-  ![Tower Showcase 6](/src/main/resources/assets/img/showcase_6.png)
-  ![Tower Showcase 7](/src/main/resources/assets/img/showcase_7.png)
+  ![Tower Showcase 3](/img/showcase_3.png)
+  ![Tower Showcase 4](/img/showcase_4.png)
+  ![Tower Showcase 5](/img/showcase_5.png)
+  ![Tower Showcase 6](/img/showcase_6.png)
+  ![Tower Showcase 7](/img/showcase_7.png)
 </details>
 
 ### Features
@@ -81,10 +82,10 @@ If you are using the mod menu you need to restart the game in order for the chan
 <details>
   <summary><b>Mod Menu images:</b></summary>
 
-  ![Mod Menu](/src/main/resources/assets/img/mod_menu_1.png)
-  ![Mod Menu](/src/main/resources/assets/img/mod_menu_2.png)
-</details>
+  ![Mod Menu](/img/mod_menu_1.png)
+  ![Mod Menu](/img/mod_menu_2.png)
+</details> -->
 
 
 ## Credits
-* [idrae](https://github.com/Idrae) *(original author)* -->
+* [idrae_](https://github.com/Idrae) *(original author)*
