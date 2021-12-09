@@ -83,22 +83,21 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
             for (int chunkZ = pos.z - 6; chunkZ <= pos.z + 6; ++chunkZ) {
                 // Derelict
                 if (configDerelictGrass != null && configDerelict != null) {
-                    boolean isDerelict = Arrays.asList(DerelictGrassTowerGenerator.BIOME_CATEGORIES).contains(biome.getCategory());
+                    boolean isDerelictGrass = Arrays.asList(DerelictGrassTowerGenerator.BIOME_CATEGORIES).contains(biome.getCategory());
 
-                    // Derelict
-                    if (isDerelict) {
+                    // Derelict Grass
+                    if (isDerelictGrass) {
                         ChunkPos possiblePos = TowersOfTheWildReworked.DERELICT_GRASS_TOWER.getStartChunk(configDerelictGrass, worldSeed, random, chunkX, chunkZ);
                         if (chunkX == possiblePos.x && chunkZ == possiblePos.z && this != TowersOfTheWildReworked.DERELICT_GRASS_TOWER) {
                             return false;
                         }
-                    // Derelict Grass
+                    // Derelict
                     } else {
                         ChunkPos possiblePos = TowersOfTheWildReworked.DERELICT_TOWER.getStartChunk(configDerelict, worldSeed, random, chunkX, chunkZ);
                         if (chunkX == possiblePos.x && chunkZ == possiblePos.z && this != TowersOfTheWildReworked.DERELICT_TOWER) {
                             return false;
                         }
                     }
-
                 }
             }
         }
