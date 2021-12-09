@@ -30,7 +30,7 @@ public class OceanWarmTowerGenerator extends AbstractTowerGenerator
                 new Identifier(TowersOfTheWildReworked.MOD_ID, "ocean_warm_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean_warm/ocean_warm_tower_top"), 1)
+                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean_warm/"+getTopStructureName()+"ocean_warm_tower_top"), 1)
                 ),
                 StructurePool.Projection.RIGID
             )  

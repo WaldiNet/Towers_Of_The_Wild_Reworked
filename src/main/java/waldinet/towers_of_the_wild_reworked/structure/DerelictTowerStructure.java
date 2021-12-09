@@ -5,6 +5,9 @@ import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 
+/**
+ * Helper class to move all the IDs from former Structure classes
+ */
 public class DerelictTowerStructure extends TowerStructure
 {
     public DerelictTowerStructure()

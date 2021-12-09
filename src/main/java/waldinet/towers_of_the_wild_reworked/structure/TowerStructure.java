@@ -71,9 +71,9 @@ public class TowerStructure extends StructureFeature<StructurePoolFeatureConfig>
         StructurePoolFeatureConfig config,
         HeightLimitView world
     ) {
-        // if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
-        //     return false;
-        // }
+        if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
+            return false;
+        }
 
         StructureConfig configDerelictGrass = chunkGenerator.getStructuresConfig().getForType(TowersOfTheWildReworked.DERELICT_GRASS_TOWER);
         StructureConfig configDerelict = chunkGenerator.getStructuresConfig().getForType(TowersOfTheWildReworked.DERELICT_TOWER);
