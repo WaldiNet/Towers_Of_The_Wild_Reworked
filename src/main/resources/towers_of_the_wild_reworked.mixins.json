@@ -4,9 +4,9 @@
   "package": "waldinet.towers_of_the_wild_reworked.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "StructurePoolsMixin"
   ],
   "client": [
-    "StructurePoolsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

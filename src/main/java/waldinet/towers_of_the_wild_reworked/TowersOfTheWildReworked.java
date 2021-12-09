@@ -24,6 +24,10 @@ public class TowersOfTheWildReworked implements ModInitializer
 	public static final TranslatableText MOD_NAME = new TranslatableText("mod.towers_of_the_wild_reworked.name");
 	public static final String MOD_ID = "towers_of_the_wild_reworked";
 	public static final String ORIGINAL_MOD_ID = "towers_of_the_wild";
+	/**
+	 * The modId "waystones" is used by both, ModdingForBlockheads/Waystones and LordDeatHunter/FabricWaystones.
+	 * Make sure only one waystone-mod is installed!
+	 */
 	public static final String WAYSTONE_MOD_ID = "waystones";
 
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);

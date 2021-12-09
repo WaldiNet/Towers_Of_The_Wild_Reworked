@@ -1,23 +1,20 @@
 # gradle
-
 .gradle/
 build/
 out/
 classes/
+curseforge_api_key.txt
 
 # eclipse
-
 *.launch
 
 # idea
-
 .idea/
 *.iml
 *.ipr
 *.iws
 
 # vscode
-
 .settings/
 .vscode/
 bin/
@@ -25,9 +22,7 @@ bin/
 .project
 
 # macos
-
 *.DS_Store
 
 # fabric
-
 run/

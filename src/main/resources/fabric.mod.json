@@ -21,9 +21,6 @@
   "entrypoints": {
     "main": [
       "waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked"
-    ],
-    "modmenu": [
-      "waldinet.towers_of_the_wild_reworked.config.screens.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -34,13 +31,13 @@
     "modmenu": {
       "links": {
         "modmenu.original_source": "https://github.com/Idrae/Towers_Of_The_Wild-1.16.3",
-        "modmenu.discord": "https://discord.gg/9Y8pCWR5tw"
+        "modmenu.discord": "https://discord.gg/qYvPxzg7gM"
       }
     }
   },
 
   "contributors": [
-    "Idrae"
+    "idrae_"
   ],
 
   "depends": {

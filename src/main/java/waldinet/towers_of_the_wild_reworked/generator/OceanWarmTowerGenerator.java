@@ -8,7 +8,6 @@ import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.util.Identifier;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
-import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
 public class OceanWarmTowerGenerator extends AbstractTowerGenerator
 {
@@ -31,11 +30,7 @@ public class OceanWarmTowerGenerator extends AbstractTowerGenerator
                 new Identifier(TowersOfTheWildReworked.MOD_ID, "ocean_warm_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(
-                        ModUtils.waystonesInstalled()
-                        ? StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean_warm/waystone_ocean_warm_tower_top")
-                        : StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean_warm/ocean_warm_tower_top")
-                    , 1)
+                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":ocean_warm/"+getTopStructureName()+"ocean_warm_tower_top"), 1)
                 ),
                 StructurePool.Projection.RIGID
             )  

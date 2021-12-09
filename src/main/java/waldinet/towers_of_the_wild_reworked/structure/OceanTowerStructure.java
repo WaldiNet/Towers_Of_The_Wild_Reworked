@@ -46,9 +46,9 @@ public class OceanTowerStructure extends TowerStructure
         StructurePoolFeatureConfig config,
         HeightLimitView world
     ) {
-        // if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
-        //     return false;
-        // }
+        if (! isFlatTerrain(chunkGenerator, chunkPos, world)) {
+            return false;
+        }
 
         int x = pos.x * 16;
         int z = pos.z * 16;
