@@ -50,6 +50,7 @@ body:
       label: Mod Version
       description: "Please select the used version of 'Towers of the Wild: Reworked'."
       options:
+        - 1.1.0-beta
         - 1.0.0-beta
     validations:
       required: true
