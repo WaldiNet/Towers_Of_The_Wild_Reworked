@@ -9,7 +9,6 @@ import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
-import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
 public class RegularTowerGenerator extends AbstractTowerGenerator
 {
@@ -44,11 +43,7 @@ public class RegularTowerGenerator extends AbstractTowerGenerator
                 new Identifier(TowersOfTheWildReworked.MOD_ID, "regular_top"),
                 new Identifier("empty"),
                 ImmutableList.of(
-                    new Pair<>(
-                        ModUtils.waystonesInstalled()
-                        ? StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":regular/waystone_tower_top")
-                        : StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":regular/tower_top")
-                    , 1)
+                    new Pair<>(StructurePoolElement.ofLegacySingle(TowersOfTheWildReworked.MOD_ID + ":regular/"+getTopStructureName()+"tower_top"), 1)
                 ),
                 StructurePool.Projection.RIGID
             )  
