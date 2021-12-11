@@ -21,7 +21,7 @@ Have fun using this mod!
 ## Getting started
 ![Environment](https://img.shields.io/badge/environment-Client%20and%20Server-informational?style=flat)
 ![Modloader](https://img.shields.io/badge/modloader-Fabric-informational?style=flat)
-![Teamspeak](https://img.shields.io/badge/compatibile%20with-1.17.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
+![Teamspeak](https://img.shields.io/badge/compatibile%20with-1.18.1%20|%201.17.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
 [![Github SourceCode](https://img.shields.io/badge/SourceCode%20on-Github-informational?style=flat&logo=github&logoColor=white&color=3A414A)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked)
 
 This mod adds tall towers in your world, inspired by **The Legend Of Zelda: Breath Of The Wild**.
@@ -59,8 +59,8 @@ This mod does not add any blocks or items to the game (if that matters to you).
 
 ## How to install
 **Prerequisite:**
-* Minecraft 1.17.1
-* [Fabric Loader](https://fabricmc.net/use/) 0.12.5 or higher
+* Minecraft 1.18.1
+* [Fabric Loader](https://fabricmc.net/use/)
 * [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) inside your `.minecraft/mods` directory
 
 Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
