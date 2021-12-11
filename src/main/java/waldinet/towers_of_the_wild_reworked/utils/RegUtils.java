@@ -51,7 +51,6 @@ public class RegUtils
     public static <FC extends FeatureConfig, S extends StructureFeature<FC>> void registerStructure(
         Identifier id,
         S towerStructure,
-        ConfiguredStructureFeature<FC, ? extends StructureFeature<FC>> configFeature,
         int spacing,
         int separation,
         int salt,
@@ -59,8 +58,7 @@ public class RegUtils
     ) {
         FabricStructureBuilder<FC, S> builder = FabricStructureBuilder.create(id, towerStructure)
             .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-            .defaultConfig(spacing, separation, salt)
-            .superflatFeature(configFeature);
+            .defaultConfig(spacing, separation, salt);
 
         if (adjustSurface) {
             builder.adjustsSurface();
@@ -73,11 +71,10 @@ public class RegUtils
     public static <FC extends FeatureConfig, S extends StructureFeature<FC>> void registerStructure(
         Identifier id,
         S towerStructure,
-        ConfiguredStructureFeature<FC, ? extends StructureFeature<FC>> configFeature,
         int spacing,
         int separation,
         int salt
     ) {
-        registerStructure(id, towerStructure, configFeature, spacing, separation, salt, true);
+        registerStructure(id, towerStructure, spacing, separation, salt, true);
     }
 }

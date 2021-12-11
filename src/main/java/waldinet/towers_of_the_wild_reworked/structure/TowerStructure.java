@@ -1,5 +1,6 @@
 package waldinet.towers_of_the_wild_reworked.structure;
 
+import StructureStartFactory;
 import java.util.Arrays;
 
 import net.minecraft.structure.PoolStructurePiece;

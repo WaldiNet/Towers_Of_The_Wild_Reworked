@@ -74,13 +74,13 @@ public class TowersOfTheWildReworked implements ModInitializer
 		Log("Registering structures...");
 
 		// https://github.dev/frqnny/mostructures
-		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, ConfiguredFeatures.DERELICT_GRASS_TOWER, 72, 8, 1689781);
-		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, 72, 8, 1689780);
-		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, ConfiguredFeatures.ICE_TOWER, 35, 8, 1689779);
-		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, ConfiguredFeatures.JUNGLE_TOWER, 38, 8, 1689778);
-		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, ConfiguredFeatures.OCEAN_TOWER, 38, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, ConfiguredFeatures.OCEAN_WARM_TOWER, 32, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, ConfiguredFeatures.REGULAR_TOWER, 42, 8, 1689777);
+		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, 72, 8, 1689781);
+		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, 72, 8, 1689780);
+		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, 35, 8, 1689779);
+		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, 38, 8, 1689778);
+		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, 38, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, 32, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, 42, 8, 1689777);
 
 		Log("Registration finished!");
 	}
