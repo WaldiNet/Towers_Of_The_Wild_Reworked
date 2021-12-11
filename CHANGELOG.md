@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0-beta
+* Added compatibility for MC 1.18.1 *(skipped 1.18 because of security exploit)*
+
 ## 1.0.0-beta.1
 * [GH-2](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues/2) - Add support for fabric waystones by [@xPand4B](https://github.com/xPand4B) in [#3](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/3)
 * Shrinked build size

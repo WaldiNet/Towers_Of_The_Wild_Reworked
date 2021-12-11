@@ -50,7 +50,8 @@ body:
       label: Mod Version
       description: "Please select the used version of 'Towers of the Wild: Reworked'."
       options:
-        - 1.1.0-beta
+        - 2.0.0-beta
+        - 1.0.0-beta.1
         - 1.0.0-beta
     validations:
       required: true
@@ -69,11 +70,11 @@ body:
       label: Java Version
       description: "Please select the used version of 'Java'."
       options:
-        - "Java 17 (LTS)"
-        - "Java 16 (Minimum supported by Minecraft 1.17.1)"
+        - "Java 17"
+        - "Java 16"
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: fabricVersion
     attributes:
       label: Fabric Version
