@@ -23,7 +23,8 @@ public class RegularTowerGenerator extends AbstractTowerGenerator
         Biome.Category.FOREST,
         Biome.Category.DESERT,
         Biome.Category.SWAMP,
-        Biome.Category.MUSHROOM
+        Biome.Category.MUSHROOM,
+        Biome.Category.MOUNTAIN,
     };
     
     static {
