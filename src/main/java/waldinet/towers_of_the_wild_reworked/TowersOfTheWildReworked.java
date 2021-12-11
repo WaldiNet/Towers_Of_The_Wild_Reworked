@@ -35,11 +35,11 @@ public class TowersOfTheWildReworked implements ModInitializer
 	//#region Structures
 	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_GRASS_TOWER = new DerelictTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_TOWER = new DerelictTowerStructure();
-	public static final StructureFeature<StructurePoolFeatureConfig> ICE_TOWER = new TowerStructure(9);
-	public static final StructureFeature<StructurePoolFeatureConfig> JUNGLE_TOWER = new TowerStructure(7);
+	public static final StructureFeature<StructurePoolFeatureConfig> ICE_TOWER = new TowerStructure();
+	public static final StructureFeature<StructurePoolFeatureConfig> JUNGLE_TOWER = new TowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> OCEAN_TOWER = new OceanTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> OCEAN_WARM_TOWER = new OceanTowerStructure();
-	public static final StructureFeature<StructurePoolFeatureConfig> REGULAR_TOWER = new TowerStructure(5);
+	public static final StructureFeature<StructurePoolFeatureConfig> REGULAR_TOWER = new TowerStructure();
 	//#endregion
 
 	// private TowersOfTheWildReworkedConfig _config;
