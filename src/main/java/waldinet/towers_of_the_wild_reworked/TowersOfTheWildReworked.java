@@ -35,11 +35,11 @@ public class TowersOfTheWildReworked implements ModInitializer
 	//#region Structures
 	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_GRASS_TOWER = new DerelictTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> DERELICT_TOWER = new DerelictTowerStructure();
-	public static final StructureFeature<StructurePoolFeatureConfig> ICE_TOWER = new TowerStructure(9);
-	public static final StructureFeature<StructurePoolFeatureConfig> JUNGLE_TOWER = new TowerStructure(7);
+	public static final StructureFeature<StructurePoolFeatureConfig> ICE_TOWER = new TowerStructure();
+	public static final StructureFeature<StructurePoolFeatureConfig> JUNGLE_TOWER = new TowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> OCEAN_TOWER = new OceanTowerStructure();
 	public static final StructureFeature<StructurePoolFeatureConfig> OCEAN_WARM_TOWER = new OceanTowerStructure();
-	public static final StructureFeature<StructurePoolFeatureConfig> REGULAR_TOWER = new TowerStructure(5);
+	public static final StructureFeature<StructurePoolFeatureConfig> REGULAR_TOWER = new TowerStructure();
 	//#endregion
 
 	// private TowersOfTheWildReworkedConfig _config;
@@ -74,13 +74,13 @@ public class TowersOfTheWildReworked implements ModInitializer
 		Log("Registering structures...");
 
 		// https://github.dev/frqnny/mostructures
-		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, ConfiguredFeatures.DERELICT_GRASS_TOWER, 72, 8, 1689781);
-		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, ConfiguredFeatures.DERELICT_TOWER, 72, 8, 1689780);
-		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, ConfiguredFeatures.ICE_TOWER, 35, 8, 1689779);
-		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, ConfiguredFeatures.JUNGLE_TOWER, 38, 8, 1689778);
-		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, ConfiguredFeatures.OCEAN_TOWER, 38, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, ConfiguredFeatures.OCEAN_WARM_TOWER, 32, 8, 1689782);
-		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, ConfiguredFeatures.REGULAR_TOWER, 42, 8, 1689777);
+		RegUtils.registerStructure(StructUtils.DERELICT_GRASS_TOWER, DERELICT_GRASS_TOWER, 72, 8, 1689781);
+		RegUtils.registerStructure(StructUtils.DERELICT_TOWER, DERELICT_TOWER, 72, 8, 1689780);
+		RegUtils.registerStructure(StructUtils.ICE_TOWER, ICE_TOWER, 35, 8, 1689779);
+		RegUtils.registerStructure(StructUtils.JUNGLE_TOWER, JUNGLE_TOWER, 38, 8, 1689778);
+		RegUtils.registerStructure(StructUtils.OCEAN_TOWER, OCEAN_TOWER, 38, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.OCEAN_WARM_TOWER, OCEAN_WARM_TOWER, 32, 8, 1689782);
+		RegUtils.registerStructure(StructUtils.REGULAR_TOWER, REGULAR_TOWER, 42, 8, 1689777);
 
 		Log("Registration finished!");
 	}

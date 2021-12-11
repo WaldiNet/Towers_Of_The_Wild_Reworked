@@ -22,6 +22,7 @@ public class DerelictGrassTowerGenerator extends AbstractTowerGenerator
         Biome.Category.FOREST,
         Biome.Category.SWAMP,
         Biome.Category.MUSHROOM,
+        Biome.Category.MOUNTAIN,
     };
     
     static {

@@ -17,7 +17,8 @@ public class DerelictTowerGenerator extends AbstractTowerGenerator
     public static Biome.Category[] BIOME_CATEGORIES = new Biome.Category[]{
         Biome.Category.MESA,  
         Biome.Category.DESERT,  
-        Biome.Category.ICY,  
+        Biome.Category.ICY,
+        Biome.Category.MOUNTAIN,
     };
     
     static {
