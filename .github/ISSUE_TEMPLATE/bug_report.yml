@@ -72,6 +72,7 @@ body:
       label: Java Version
       description: "Please select the used version of 'Java'."
       options:
+        - "Java 18"
         - "Java 17"
         - "Java 16"
     validations:
@@ -81,7 +82,7 @@ body:
     attributes:
       label: Fabric Version
       description: "Please enter the used version of 'Fabric' and 'Fabric API'."
-      placeholder: |
+      value: |
         - **Fabric:** ex. 0.12.5-1-17-1
         - **Fabric API:** ex. 0.42.1+1.17
     validations:
