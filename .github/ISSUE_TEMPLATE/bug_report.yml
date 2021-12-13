@@ -61,6 +61,8 @@ body:
       label: Minecraft Version
       description: "Please select the used version of 'Minecraft'."
       options:
+        - "1.18.1"
+        - "1.18"
         - "1.17.1"
     validations:
       required: true
