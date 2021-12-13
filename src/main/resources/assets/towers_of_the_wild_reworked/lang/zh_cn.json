@@ -1,0 +1,44 @@
+{
+    "mod.towers_of_the_wild_reworked.name": "旷野之息高塔：重制",
+
+    "modmenu.original_source": "来源",
+    "modmenu.summaryTranslation.towers_of_the_wild_reworked": "雄伟的高塔，增强你的的探索体验",
+    "modmenu.descriptionTranslation.towers_of_the_wild_reworked": "在你的世界中加入高塔，受塞尔达传说：旷野之息启发。",
+
+    "advancements.towers_of_the_wild_reworked.root.title": "旷野之息高塔：重制",
+    "advancements.towers_of_the_wild_reworked.root.description": "你能登顶所有的高塔吗？",
+    "advancements.towers_of_the_wild_reworked.derelict_grass_tower.title": "乡村之旅",
+    "advancements.towers_of_the_wild_reworked.derelict_grass_tower.description": "在草原或森林里发现一座远古高塔",
+    "advancements.towers_of_the_wild_reworked.derelict_tower.title": "我是这么...发现它的",
+    "advancements.towers_of_the_wild_reworked.derelict_tower.description": "发现一座远古高塔",
+    "advancements.towers_of_the_wild_reworked.ice_tower.title": "哇哦",
+    "advancements.towers_of_the_wild_reworked.ice_tower.description": "发现一座冰冻高塔",
+    "advancements.towers_of_the_wild_reworked.jungle_tower.title": "BANANAS?",
+    "advancements.towers_of_the_wild_reworked.jungle_tower.description": "在丛林里发现一座高塔",
+    "advancements.towers_of_the_wild_reworked.ocean_tower.title": "这是一座岛吗？",
+    "advancements.towers_of_the_wild_reworked.ocean_tower.description": "在海里发现一座高塔",
+    "advancements.towers_of_the_wild_reworked.ocean_warm_tower.title": "海底总动员?",
+    "advancements.towers_of_the_wild_reworked.ocean_warm_tower.description": "在海里发现一座只有珊瑚的高塔",
+    "advancements.towers_of_the_wild_reworked.regular_tower.title": "新鲜空气",
+    "advancements.towers_of_the_wild_reworked.regular_tower.description": "好吧，这我怎么上去？",
+
+    "config.towers_of_the_wild_reworked.tower_active": "启用",
+    "config.towers_of_the_wild_reworked.tower_spacing": "间隔",
+    "config.towers_of_the_wild_reworked.tower_spacing.tooltip": "高塔之间的距离间隔 (low: 常见, high: 稀有)",
+
+    "config.towers_of_the_wild_reworked.derelict_grass": "废弃的草原高塔",
+    "config.towers_of_the_wild_reworked.derelict": "废弃的高塔",
+    "config.towers_of_the_wild_reworked.ice": "冰冻高塔",
+    "config.towers_of_the_wild_reworked.jungle": "丛林高塔",
+    "config.towers_of_the_wild_reworked.ocean": "海洋高塔",
+    "config.towers_of_the_wild_reworked.ocean_warm": "暖洋高塔",
+    "config.towers_of_the_wild_reworked.regular": "普通高塔",
+
+    "category.towers_of_the_wild_reworked.towers": "",
+    "config.towers_of_the_wild_reworked.biome_blacklist": "",
+    "config.towers_of_the_wild_reworked.biome_blacklist.tooltip": "不会生成高塔的生物群系的表",
+
+    "config.towers_of_the_wild_reworked.mod_integration": "模组整合",
+    "config.towers_of_the_wild_reworked.mod_integration.waystones": "在塔顶生成传送石碑",
+    "config.towers_of_the_wild_reworked.mod_integration.waystones.tooltip": "如果已安装传送石碑Mod且已启用，高塔生成的同时传送石碑也会生成在塔顶。如果没有安装传送石碑Mod，则此项无效。
+}
