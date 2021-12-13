@@ -40,5 +40,5 @@
 
     "config.towers_of_the_wild_reworked.mod_integration": "模组整合",
     "config.towers_of_the_wild_reworked.mod_integration.waystones": "在塔顶生成传送石碑",
-    "config.towers_of_the_wild_reworked.mod_integration.waystones.tooltip": "如果已安装传送石碑Mod且已启用，高塔生成的同时传送石碑也会生成在塔顶。如果没有安装传送石碑Mod，则此项无效。
+    "config.towers_of_the_wild_reworked.mod_integration.waystones.tooltip": "如果已安装传送石碑Mod且已启用，高塔生成的同时传送石碑也会生成在塔顶。如果没有安装传送石碑Mod，则此项无效。"
 }
