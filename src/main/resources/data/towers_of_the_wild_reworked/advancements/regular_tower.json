@@ -5,10 +5,10 @@
             "item": "minecraft:diamond_sword"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.regular_tower.title"
+            "translate": "A breath of fresh air"
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.regular_tower.description"
+            "translate": "Fine...but how do I get up there?"
         },
         "frame": "task",
         "show_toast": true,

@@ -5,10 +5,10 @@
             "item": "minecraft:cracked_deepslate_bricks"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.derelict_tower.title"
+            "translate": "I found it like this..."
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.derelict_tower.description"
+            "translate": "Find a Ancient Tower"
         },
         "frame": "task",
         "show_toast": true,

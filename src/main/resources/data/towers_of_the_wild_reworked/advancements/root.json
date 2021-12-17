@@ -4,10 +4,10 @@
             "item": "minecraft:stone_bricks"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.root.title"
+            "translate": "Towers of the Wild: Reworked"
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.root.description"
+            "translate": "Are you able to climb all Towers?"
         },
         "frame": "task",
         "show_toast": false,
