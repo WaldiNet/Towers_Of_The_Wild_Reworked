@@ -1,13 +1,13 @@
 # Changelog
 
-## v2.0.1
+## v2.1.0
 * Add zh_cn localization by [@RawPineapple](https://github.com/RawPineapple) in [#8](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/8)
 * Updated fabric dependencies
 
 ### New Contributors
 * [@RawPineapple](https://github.com/RawPineapple) made their first contribution in [#8](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/8)
 
-**Full Changelog**: [v2.0.0...v2.0.1](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/compare/v2.0.0...v2.0.1)
+**Full Changelog**: [v2.0.0...v2.1.0](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/compare/v2.0.0...v2.1.0)
 
 ## v2.0.0
 * [GH-4](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues/4) - Add support for 1.18.1 by [@xPand4B](https://github.com/xPand4B) in [#5](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/5)

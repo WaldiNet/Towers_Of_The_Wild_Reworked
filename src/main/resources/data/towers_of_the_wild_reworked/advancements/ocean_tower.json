@@ -5,10 +5,10 @@
             "item": "minecraft:birch_boat"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.ocean_tower.title"
+            "translate": "Is this an Island?"
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.ocean_tower.description"
+            "translate": "Find a Tower in the Ocean"
         },
         "frame": "task",
         "show_toast": true,

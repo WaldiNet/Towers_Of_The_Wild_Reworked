@@ -5,10 +5,10 @@
             "item": "minecraft:mossy_cobblestone"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.derelict_grass_tower.title"
+            "translate": "A trip to the Countryside"
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.derelict_grass_tower.description"
+            "translate": "Find a Ancient Tower in the Woods or out in the Fields"
         },
         "frame": "task",
         "show_toast": true,

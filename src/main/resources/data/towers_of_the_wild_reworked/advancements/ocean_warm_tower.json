@@ -5,10 +5,10 @@
             "item": "minecraft:tropical_fish_bucket"
         },
         "title": {
-            "translate": "advancements.towers_of_the_wild_reworked.ocean_warm_tower.title"
+            "translate": "Found Nemo?"
         },
         "description": {
-            "translate": "advancements.towers_of_the_wild_reworked.ocean_warm_tower.description"
+            "translate": "Find a Tower in the Ocean...just with Corals"
         },
         "frame": "task",
         "show_toast": true,
