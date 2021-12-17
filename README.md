@@ -73,3 +73,4 @@ Will be implemented in a later build
 
 ## Credits
 * [idrae_](https://github.com/Idrae) *(original author)*
+* [RawPineapple](https://github.com/RawPineapple) *(translation for zh_cn)*

@@ -9,7 +9,7 @@
     "Rainerle3000"
   ],
   "contact": {
-    "homepage": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild-reworked",
     "sources": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked",
     "issues": "https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues"
   },
@@ -37,7 +37,8 @@
   },
 
   "contributors": [
-    "idrae_"
+    "idrae_ (Original author)",
+    "RawPineapple (Translation zh_cn)"
   ],
 
   "depends": {
