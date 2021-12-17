@@ -3,6 +3,7 @@
 ## v2.1.0
 * Add zh_cn localization by [@RawPineapple](https://github.com/RawPineapple) in [#8](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/8)
 * Updated fabric dependencies
+* [GH-7](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues/7) - Added translation fallback by [@xPand4B](https://github.com/xPand4B) in [#10](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/10)
 
 ### New Contributors
 * [@RawPineapple](https://github.com/RawPineapple) made their first contribution in [#8](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/8)
