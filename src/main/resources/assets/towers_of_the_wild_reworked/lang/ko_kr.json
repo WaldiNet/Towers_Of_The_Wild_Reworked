@@ -1,7 +1,7 @@
 {
     "mod.towers_of_the_wild_reworked.name": "야생의 탑들: 리워크",
 
-    "modmenu.original_source": "원본 소스 코드",
+    "modmenu.original_source": "원본 소스",
     "modmenu.summaryTranslation.towers_of_the_wild_reworked": "흥미진진한 탐험을 위한 멋진 탑들!",
     "modmenu.descriptionTranslation.towers_of_the_wild_reworked": "젤다의 전설: 브레스 오브 더 와일드에 영감을 받은 높은 탑들을 여러분의 세계에 추가해줍니다.",
 
@@ -11,19 +11,19 @@
     "Find a Ancient Tower": "고대의 탑을 찾으세요.",
     "Brrrrrr": "부르르르르르",
     "Find a Icy Tower": "얼어붙은 탑을 찾으세요.",
-    "BANANAS?": "바나나?",
+    "BANANAS?": "바나나?!",
     "Find a Tower in the Jungle": "정글에 있는 탑을 찾으세요.",
     "Is this an Island?": "이거 섬인가?",
     "Find a Tower in the Ocean": "바다에 있는 탑을 찾으세요.",
-    "Found Nemo?": "니모를 찾았나요?",
-    "Find a Tower in the Ocean...just with Corals": "바다에 있는 탑을 찾으세요 ...산호와 함께 말이죠",
-    "A breath of fresh air": "신선한 숨결",
-    "Fine...but how do I get up there?": "다 좋은데... 어떻게 저기까지 올라가지?",
+    "Found Nemo?": "니모를 찾아서",
+    "Find a Tower in the Ocean...just with Corals": "바다에 있는 탑을 찾으세요 ...산호와 함께 말이죠!",
+    "A breath of fresh air": "신선한 바람의 숨결",
+    "Fine...but how do I get up there?": "다 좋은데... 저기까지 어떻게 올라가지?",
     "Towers of the Wild: Reworked": "야생의 탑들: 리워크",
     "Are you able to climb all Towers?": "모든 탑을 다 오를 수 있나요?",
 
     "config.towers_of_the_wild_reworked.tower_active": "활성 여부",
-    "config.towers_of_the_wild_reworked.tower_spacing": "탑간 간격",
+    "config.towers_of_the_wild_reworked.tower_spacing": "탑 간 간격",
     "config.towers_of_the_wild_reworked.tower_spacing.tooltip": "각 탑 간 간격을 설정합니다 (가깝게: 자주 나옴, 멀리: 드물게 나옴)",
 
     "config.towers_of_the_wild_reworked.derelict_grass": "방치된 초원 탑",
