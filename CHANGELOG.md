@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.1.1
+### What's Changed
+* Create es_cl.json by [DracoExE](https://github.com/DracoExE) in [#11](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/11)
+* Add korean localization by [scarf005](https://github.com/scarf005) in [#12](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/12)
+
+### New Contributors
+* [DracoExE](https://github.com/DracoExE) made their first contribution in [#11](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/11)
+* [scarf005](https://github.com/scarf005) made their first contribution in [#12](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/12)
+
+**Full Changelog**: [v2.1.0...v.2.1.1](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/compare/v2.1.0...v2.1.1)
+
 ## v2.1.0
 * Add zh_cn localization by [@RawPineapple](https://github.com/RawPineapple) in [#8](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/8)
 * Updated fabric dependencies
