@@ -1,6 +1,6 @@
 # Towers of the Wild: Reworked <!-- omit in toc -->
 [![build](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml)
-[![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/9Y8pCWR5tw)
+[![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/qYvPxzg7gM)
 
 This mod is based on the popular Forge Mod [Towers of the Wild](https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild), 
 so all credits go to the original Author [idrae_](https://www.curseforge.com/members/idrae_).
