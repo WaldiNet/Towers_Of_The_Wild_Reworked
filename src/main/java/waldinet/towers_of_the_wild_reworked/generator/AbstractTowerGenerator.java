@@ -1,5 +1,6 @@
 package waldinet.towers_of_the_wild_reworked.generator;
 
+import waldinet.towers_of_the_wild_reworked.TowersOfTheWildReworked;
 import waldinet.towers_of_the_wild_reworked.utils.ModUtils;
 
 public abstract class AbstractTowerGenerator
@@ -14,6 +15,10 @@ public abstract class AbstractTowerGenerator
      */
     protected static String getTopStructureName()
     {
+        if (!TowersOfTheWildReworked.CONFIG.modSupport.enableWaystones) {
+            return "";
+        }
+
         if (ModUtils.waystonesInstalled()) {
             return "waystone_";
         }

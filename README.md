@@ -16,6 +16,7 @@ Have fun using this mod!
 * [How to install](#how-to-install)
 * [How to configure](#how-to-configure)
 * [Credits](#credits)
+* [How to build](#how-to-build)
 
 
 ## Getting started
@@ -61,7 +62,8 @@ This mod does not add any blocks or items to the game (if that matters to you).
 **Prerequisite:**
 * Minecraft 1.18.1
 * [Fabric Loader](https://fabricmc.net/use/)
-* [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) inside your `.minecraft/mods` directory
+* [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) inside `.minecraft/mods`
+* [Cloth Config API (Fabric)](https://www.curseforge.com/minecraft/mc-mods/cloth-config) inside `.minecraft/mods`
 
 Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
 
@@ -69,10 +71,33 @@ Simply put the file `towers_of_the_wild-*.jar` inside you mods directory.
 If you also want to use [Waystones (Fabric Edition)](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) you'll also need the [Balm](https://www.curseforge.com/minecraft/mc-mods/balm-fabric) mod.
 
 ## How to configure
-Will be implemented in a later build
+The mod generates the file `.minecraft/config/towers_of_the_wild_reworked.json`.
+
+There you can set a multiple of things:
+* Should the tower type be active?
+* What should be the spacing *(in chunks)*?
+* What should be the separation *(in chunks)*?
+* Do you want Waystones on top of towers?
+* Some debugging stuff
+
+### !!! Important !!! <!-- omit in toc -->
+The spacing has to be higher than the separation!
 
 ## Credits
 * [idrae_](https://github.com/Idrae) *(original author)*
 * [RawPineapple](https://github.com/RawPineapple) *(translation for zh_cn)*
 * [DracoExE](https://github.com/DracoExE) *(translation for es_cl)*
 * [scarf005](https://github.com/scarf005) *(translation for ko_kr)*
+
+## How to build
+Just as with *(almost)* every fabric mod, run following commands and everything should be up an running.
+```bash
+gradlew genSources
+gradlew build
+
+# For Client testing
+gradlew runClient
+
+# For Server testing
+gradlew runServer
+```

@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.0
+### What's Changed
+* [GH-1](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues/1) - Added mod config by [@xPand4B](https://github.com/xPand4B) in [#14](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/14)
+
+**Full Changelog**: [v2.1.1...v.2.2.0](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/compare/v2.1.1...v2.2.0)
+
 ## v2.1.1
 ### What's Changed
 * Create es_cl.json by [DracoExE](https://github.com/DracoExE) in [#11](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/11)
