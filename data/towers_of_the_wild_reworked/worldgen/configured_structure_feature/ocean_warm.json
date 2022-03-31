@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:village",
+    "biomes": "#towers_of_the_wild_reworked:has_structure/ocean_warm_tower",
+    "adapt_noise": false,
+    "spawn_overrides": {},
+    "config": {
+        "start_pool": "towers_of_the_wild_reworked:ocean_warm/bottom",
+        "size": 2
+    }
+}
