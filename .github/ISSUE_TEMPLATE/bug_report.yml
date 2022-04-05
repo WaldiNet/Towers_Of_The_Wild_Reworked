@@ -69,6 +69,7 @@ body:
         - "1.18.1"
         - "1.18"
         - "1.17.1"
+        - "Other"
     validations:
       required: true
   - type: dropdown
@@ -80,18 +81,19 @@ body:
         - "Java 18"
         - "Java 17"
         - "Java 16"
+        - "Other"
     validations:
       required: true
   - type: textarea
     id: fabricVersion
     attributes:
-      label: Fabric Version
+      label: Fabric Version (only if below v3.0.0)
       description: "Please enter the used version of 'Fabric' and 'Fabric API'."
       value: |
         - **Fabric:** ex. 0.12.5-1-17-1
         - **Fabric API:** ex. 0.42.1+1.17
     validations:
-      required: true
+      required: false
   - type: textarea
     id: logs
     attributes:
