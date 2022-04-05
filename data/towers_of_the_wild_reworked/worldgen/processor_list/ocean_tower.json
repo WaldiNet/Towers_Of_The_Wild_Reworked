@@ -1,9 +1,0 @@
-{
-    "processors": [
-        {
-            "processor_type": "gravity",
-            "heightmap": "OCEAN_FLOOR",
-            "offset": -1
-        }
-    ]
-}
