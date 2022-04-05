@@ -2,7 +2,8 @@
 
 ## 3.0.0
 ### What's Changed
-* tbd
+* Moved from Fabric modloader to Vanilla Datapack by [@xPand4B](https://github.com/xPand4B) in [#16](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/16)
+* Added support for 1.18.2
 
 **Full Changelog**: [v2.2.0...v.3.0.0](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/compare/v2.2.0...v3.0.0)
 
