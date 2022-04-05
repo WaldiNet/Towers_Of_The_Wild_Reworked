@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+### What's Changed
+* tbd
+
+**Full Changelog**: [v2.2.0...v.3.0.0](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/compare/v2.2.0...v3.0.0)
+
 ## v2.2.0
 ### What's Changed
 * [GH-1](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/issues/1) - Added mod config by [@xPand4B](https://github.com/xPand4B) in [#14](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/pull/14)
