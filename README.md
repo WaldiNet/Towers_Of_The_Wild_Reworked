@@ -7,7 +7,7 @@ so all credits go to the original Author [idrae_](https://www.curseforge.com/mem
 
 We really wanted to use this mod on 1.17+ so we decided to port it.
 
-First, it started as as a Fabric Mod. Now it's available as a Vanilla Datapack, which means you don't even need any modloader!
+First, it started as as a Fabric Mod. **Starting with version v3.0.0, it's available as a Vanilla Datapack**, which means you don't even need any modloader!
 
 ## Table of content <!-- omit in toc -->
 * [Getting started](#getting-started)
@@ -27,8 +27,6 @@ This datapack adds tall towers in your world, inspired by **The Legend Of Zelda:
 This will make your explorations a bit more exciting !
 
 At the top of the tower *(which is purposely not so easy to climb)*, you will find a chest with some loot, as well as a nice view :)
-
-The pack should (!) be compatible with every world gen/structure mod/datapack.
 
 Plus, it is also compatible with the [Waystones (Fabric Edition)](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) and [Fabric Waystones](https://www.curseforge.com/minecraft/mc-mods/fabric-waystones) mod. If you have one of these mods installed a waystone will spawn on top of each tower.
 
@@ -53,14 +51,14 @@ This pack does not add any blocks or items to the game *(if that matters to you)
     * **Only install one of them!**
 * Randomly generating Towers in your world
 * Great loot on top of every Tower!
-* Multiple Tower types *(derelict, derelict_grass, ice, jungle, ocean, ocean_warm, regular)*
+* Multiple Tower types
 * Advancements for every tower *(Can you climb all of them?)*
 
 ## How to install
 **Prerequisite:**
-* Minecraft 1.18.2
+* Minecraft 1.18.2 or above
 
-Simply put the file `towers_of_the_wild-*.zip` inside you `world/datapacks` directory.
+Simply put the file `Towers_Of_The_Wild-*.zip` inside the `.minecraft/saves/world/datapacks` directory.
 
 ## Credits
 * [idrae_](https://github.com/Idrae) *(original author)*
