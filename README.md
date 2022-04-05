@@ -9,6 +9,9 @@ We really wanted to use this mod on 1.17+ so we decided to port it.
 
 First, it started as as a Fabric Mod. **Starting with version v3.0.0, it's available as a Vanilla Datapack**, which means you don't even need any modloader!
 
+### !!! Important !!!<!-- omit in toc -->
+If you are running 1.18.1 or lower please refer to the branch for [1.17.x](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/tree/1.17.x) or [1.18.1](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/tree/fabric-1.18.1)
+
 ## Table of content <!-- omit in toc -->
 * [Getting started](#getting-started)
   * [Features](#features)
