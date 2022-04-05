@@ -1,5 +1,4 @@
 # Towers of the Wild: Reworked (Datapack) <!-- omit in toc -->
-[![build](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked/actions/workflows/build.yml)
 [![Discord](https://img.shields.io/badge/Chat%20on-Discord-informational?style=flat&logo=discord&logoColor=white&color=7289DA)](https://discord.gg/qYvPxzg7gM)
 
 This pack is based on the popular Forge Mod [Towers of the Wild](https://www.curseforge.com/minecraft/mc-mods/towers-of-the-wild), 
