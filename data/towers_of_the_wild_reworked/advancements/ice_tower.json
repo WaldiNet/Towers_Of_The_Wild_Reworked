@@ -1,5 +1,5 @@
 {
-    "parent": "towers_of_the_wild_reworked:root",
+    "parent": "totw_reworked:root",
     "display": {
         "icon": {
             "item": "minecraft:blue_ice"
@@ -20,7 +20,7 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "location": {
-                    "feature": "towers_of_the_wild_reworked:ice"
+                    "feature": "totw_reworked:ice"
                 }
             }
         }

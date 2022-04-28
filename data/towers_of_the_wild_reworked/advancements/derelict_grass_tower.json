@@ -1,5 +1,5 @@
 {
-    "parent": "towers_of_the_wild_reworked:root",
+    "parent": "totw_reworked:root",
     "display": {
         "icon": {
             "item": "minecraft:mossy_cobblestone"
@@ -20,7 +20,7 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "location": {
-                    "feature": "towers_of_the_wild_reworked:derelict_grass"
+                    "feature": "totw_reworked:derelict_grass"
                 }
             }
         }

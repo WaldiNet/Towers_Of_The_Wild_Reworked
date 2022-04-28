@@ -1,12 +1,12 @@
 {
-    "name": "towers_of_the_wild_reworked:jungle/top",
+    "name": "totw_reworked:jungle/top",
     "fallback": "minecraft:empty",
     "elements": [
         {
             "weight": 1,
             "element": {
                 "element_type": "minecraft:legacy_single_pool_element",
-                "location": "towers_of_the_wild_reworked:jungle/jungle_tower_top",
+                "location": "totw_reworked:jungle/jungle_tower_top",
                 "projection": "rigid",
                 "processors": "minecraft:empty"
             }

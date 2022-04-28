@@ -1,12 +1,12 @@
 {
-    "name": "towers_of_the_wild_reworked:derelict_grass/top",
+    "name": "totw_reworked:derelict_grass/top",
     "fallback": "minecraft:empty",
     "elements": [
         {
             "weight": 1,
             "element": {
                 "element_type": "minecraft:legacy_single_pool_element",
-                "location": "towers_of_the_wild_reworked:derelict_grass/derelict_grass_tower_top",
+                "location": "totw_reworked:derelict_grass/derelict_grass_tower_top",
                 "projection": "rigid",
                 "processors": "minecraft:empty"
             }
