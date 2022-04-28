@@ -67,3 +67,4 @@ Simply put the file `Towers_Of_The_Wild-*.zip` inside the `.minecraft/saves/worl
 * [RawPineapple](https://github.com/RawPineapple) *(translation for zh_cn)*
 * [DracoExE](https://github.com/DracoExE) *(translation for es_cl)*
 * [scarf005](https://github.com/scarf005) *(translation for ko_kr)*
+* [WelpSTudenT](https://github.com/WelpSTudent)
