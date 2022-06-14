@@ -19,8 +19,10 @@
         "regular": {
             "trigger": "minecraft:location",
             "conditions": {
-                "location": {
-                    "feature": "totw_reworked:regular"
+                "player": {
+                    "location": {
+                        "structure": "totw_reworked:regular"
+                    }
                 }
             }
         }

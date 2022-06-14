@@ -19,8 +19,10 @@
         "derelict_grass": {
             "trigger": "minecraft:location",
             "conditions": {
-                "location": {
-                    "feature": "totw_reworked:derelict_grass"
+                "player": {
+                    "location": {
+                        "structure": "totw_reworked:derelict_grass"
+                    }
                 }
             }
         }
