@@ -1,6 +1,14 @@
 # Changelog
 
-## 3.0.0
+## v4.0.0
+## What's Changed
+* [GH-17](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/issues/17) - Renamed project namespace to totw_reworked by [@xPand4B](https://github.com/xPand4B) in [#19](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/19)
+* [GH-21](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/issues/21) - Add MC 1.19 support by [@xPand4B](https://github.com/xPand4B) in [#22](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/22)
+* [GH-23](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/issues/17) - Re-added ocean towers by [@xPand4B](https://github.com/xPand4B) in [#24](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/24)
+
+**Full Changelog**: [v3.0.0...v4.0.0](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/compare/v3.0.0...v4.0.0)
+
+## v3.0.0
 ### What's Changed
 * Moved from Fabric modloader to Vanilla Datapack by [@xPand4B](https://github.com/xPand4B) in [#16](https://github.com/WaldiNet/Towers_Of_The_Wild_Reworked/pull/16)
 * Added support for 1.18.2
