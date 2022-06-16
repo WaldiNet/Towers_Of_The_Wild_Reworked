@@ -7,7 +7,7 @@
         "minecraft:savanna",
         "minecraft:forest",
         "minecraft:swamp",
-        "#minecraft:mountain",
+        "#minecraft:is_mountain",
         "#minecraft:is_hill"
     ]
 }
