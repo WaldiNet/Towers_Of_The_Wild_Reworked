@@ -19,8 +19,10 @@
         "jungle": {
             "trigger": "minecraft:location",
             "conditions": {
-                "location": {
-                    "feature": "totw_reworked:jungle"
+                "player": {
+                    "location": {
+                        "structure": "totw_reworked:jungle"
+                    }
                 }
             }
         }

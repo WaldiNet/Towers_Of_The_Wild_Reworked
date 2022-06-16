@@ -19,8 +19,10 @@
         "derelict": {
             "trigger": "minecraft:location",
             "conditions": {
-                "location": {
-                    "feature": "totw_reworked:derelict"
+                "player": {
+                    "location": {
+                        "structure": "totw_reworked:derelict"
+                    }
                 }
             }
         }

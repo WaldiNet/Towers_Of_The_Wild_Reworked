@@ -19,8 +19,10 @@
         "ice": {
             "trigger": "minecraft:location",
             "conditions": {
-                "location": {
-                    "feature": "totw_reworked:ice"
+                "player": {
+                    "location": {
+                        "structure": "totw_reworked:ice"
+                    }
                 }
             }
         }
