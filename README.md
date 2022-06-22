@@ -15,7 +15,7 @@ If you are running 1.18.1 or lower please refer to the branch for [1.17.x](https
 * [Getting started](#getting-started)
   * [Features](#features)
 * [How to install](#how-to-install)
-* [Credits](#credits)
+* [Contributer](#contributer)
 
 
 ## Getting started
@@ -57,12 +57,9 @@ This pack does not add any blocks or items to the game *(if that matters to you)
 * Advancements for every tower *(Can you climb all of them?)*
 
 ## How to install
-**Prerequisite:**
-* Minecraft 1.18.2 or above
+Simply put the file `Towers_Of_The_Wild-*.zip` inside the `.minecraft/saves/{WORLD}/datapacks` directory.
 
-Simply put the file `Towers_Of_The_Wild-*.zip` inside the `.minecraft/saves/world/datapacks` directory.
-
-## Credits
+## Contributer
 * [idrae_](https://github.com/Idrae) *(original author)*
 * [RawPineapple](https://github.com/RawPineapple) *(translation for zh_cn)*
 * [DracoExE](https://github.com/DracoExE) *(translation for es_cl)*
