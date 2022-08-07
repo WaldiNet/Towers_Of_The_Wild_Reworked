@@ -6,7 +6,7 @@
             "weight": 1,
             "element": {
                 "element_type": "minecraft:legacy_single_pool_element",
-                "location": "totw_reworked:regular/tower_top",
+                "location": "totw_reworked:regular/fwaystones_tower_top",
                 "projection": "rigid",
                 "processors": "minecraft:empty"
             }
