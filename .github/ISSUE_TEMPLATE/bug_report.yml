@@ -50,6 +50,8 @@ body:
       label: Mod Version
       description: "Please select the used version of 'Towers of the Wild: Reworked'."
       options:
+        - "v4.2.0"
+        - "v4.1.0"
         - "v4.0.2"
         - "v4.0.1"
         - "v4.0.0"
@@ -79,6 +81,10 @@ body:
       label: Minecraft Version
       description: "Please select the used version of 'Minecraft'."
       options:
+        - "1.20.1"
+        - "1.20"
+        - "1.19.4"
+        - "1.19.3"
         - "1.19.2"
         - "1.19.1"
         - "1.19"
@@ -95,6 +101,7 @@ body:
       label: Java Version
       description: "Please select the used version of 'Java'."
       options:
+        - "Java 20"
         - "Java 18"
         - "Java 17"
         - "Java 16"
