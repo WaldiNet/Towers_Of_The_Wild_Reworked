@@ -36,7 +36,7 @@
               }
             }
           ],
-          "name": "minecraft:feather"
+          "name": "minecraft:prismarine_shard"
         },
         {
           "type": "minecraft:item",
@@ -84,11 +84,21 @@
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": 30,
-              "treasure": true
+              "levels": 30
             }
           ],
           "name": "minecraft:book"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30
+            }
+          ],
+          "name": "minecraft:heart_of_the_sea"
         }
       ]
     },

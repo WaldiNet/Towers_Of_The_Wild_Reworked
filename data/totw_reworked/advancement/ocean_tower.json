@@ -2,13 +2,13 @@
     "parent": "totw_reworked:root",
     "display": {
         "icon": {
-            "item": "minecraft:vine"
+            "id": "minecraft:birch_boat"
         },
         "title": {
-            "translate": "BANANAS?"
+            "translate": "Is this an Island?"
         },
         "description": {
-            "translate": "Find a Tower in the Jungle"
+            "translate": "Find a Tower in the Ocean"
         },
         "frame": "task",
         "show_toast": true,
@@ -16,20 +16,21 @@
         "hidden": false
     },
     "criteria": {
-        "jungle": {
+        "ocean": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": {
-                    "location": {
-                        "structure": "totw_reworked:jungle"
+                "player": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "structures": "totw_reworked:ocean"
+                        }
                     }
-                }
+                ]
             }
         }
     },
     "requirements": [
-        [
-            "jungle"
-        ]
+        [ "ocean" ]
     ]
 }

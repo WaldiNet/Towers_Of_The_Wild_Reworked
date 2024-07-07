@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:stone_bricks"
+            "id": "minecraft:stone_bricks"
         },
         "title": {
             "translate": "Towers of the Wild: Reworked"
@@ -9,7 +9,7 @@
         "description": {
             "translate": "Are you able to climb all Towers?"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false,
@@ -21,15 +21,13 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:crafting_table"
+                        "items": "minecraft:crafting_table"
                     }
                 ]
             }
         }
     },
     "requirements": [
-        [
-            "sample_trigger"
-        ]
+        [ "sample_trigger" ]
     ]
 }
