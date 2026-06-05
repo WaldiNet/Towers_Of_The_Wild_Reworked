@@ -25,9 +25,9 @@ Iterates over all 7 tower types × 3 waystone variants, runs `sed` to swap the
 
 The `sed` call on macOS requires `-i ''` (empty backup extension); the CI workflow
 (`release.yml`) runs on Linux and uses `-i` without the extra argument.
-- `Towers_Of_The_Wild_Reworked-regular-X.Y.Z.zip`
-- `Towers_Of_The_Wild_Reworked-fwaystones-X.Y.Z.zip`
-- `Towers_Of_The_Wild_Reworked-waystones-X.Y.Z.zip`
+- `Towers_Of_The_Wild_Reworked-Regular-X.Y.Z.zip`
+- `Towers_Of_The_Wild_Reworked-Fabric_Waystones-X.Y.Z.zip`
+- `Towers_Of_The_Wild_Reworked-Waystones-X.Y.Z.zip`
 
 Uses `python3 -c` with `zipfile` to create ZIPs from `data/`, `LICENSE`, `pack.mcmeta`,
 `pack.png`, and `README.md`. Built archives are gitignored (`*.zip` in `.gitignore`).
