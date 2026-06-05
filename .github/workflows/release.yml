@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant:
+          - { name: "regular", prefix: "" }
+          - { name: "fwaystones", prefix: "fwaystones_" }
+          - { name: "waystones", prefix: "waystone_" }
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Apply tower variant
+        run: |
+          for type in derelict derelict_grass ice jungle ocean ocean_warm regular; do
+            file="data/totw_reworked/worldgen/template_pool/$type/top.json"
+            sed -i "s|\"totw_reworked:$type/[^\"]*\"|\"totw_reworked:$type/${{ matrix.variant.prefix }}${type}_tower_top\"|" "$file"
+          done
+
+      - name: Create archive
+        run: |
+          zip -r "Towers_Of_The_Wild_Reworked-${{ matrix.variant.name }}-${{ github.ref_name }}.zip" \
+            data/ LICENSE pack.mcmeta pack.png README.md
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.variant.name }}
+          path: "Towers_Of_The_Wild_Reworked-${{ matrix.variant.name }}-${{ github.ref_name }}.zip"
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v3
+        with:
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            regular/*.zip
+            fwaystones/*.zip
+            waystones/*.zip
