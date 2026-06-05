@@ -29,13 +29,13 @@ jobs:
 
       - name: Create archive
         run: |
-          zip -r "Towers_Of_The_Wild_Reworked-${{ matrix.variant.name }}-${{ github.ref_name }}.zip" \
+          zip -r "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip" \
             data/ LICENSE pack.mcmeta pack.png README.md
 
       - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.variant.name }}
-          path: "Towers_Of_The_Wild_Reworked-${{ matrix.variant.name }}-${{ github.ref_name }}.zip"
+          path: "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip"
 
   release:
     needs: build
