@@ -34,7 +34,7 @@ for entry in "${VARIANTS[@]}"; do
 
   for type in "${TYPES[@]}"; do
     file="$TOWER_DIR/$type/top.json"
-    sed -i "s|\"totw_reworked:$type/[^\"]*\"|\"totw_reworked:$type/${PREFIX}${type}_tower_top\"|" "$file"
+    sed -i '' "s|\"totw_reworked:$type/[^\"]*\"|\"totw_reworked:$type/${PREFIX}${type}_tower_top\"|" "$file"
   done
 
   ARCHIVE="Towers_Of_The_Wild_Reworked-${NAME}-${VERSION}.zip"
