@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "minecraft-datapack": {
+      "source": "jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-datapack/SKILL.md",
+      "computedHash": "1b6761736d7afaa0246ea2b72c1cfc1ec6450c1ca17fb5dd6b41d4a9fd8e756b"
+    }
+  }
+}
