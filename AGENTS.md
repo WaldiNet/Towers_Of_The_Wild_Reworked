@@ -21,7 +21,10 @@ Automates building all 3 variants as `.zip` archives for distribution:
 ```
 
 Iterates over all 7 tower types × 3 waystone variants, runs `sed` to swap the
-`"location"` in each `top.json` (same logic as `helper.sh`), and produces 3 archives:
+`"location"` in each `top.json`, and produces 3 archives:
+
+The `sed` call on macOS requires `-i ''` (empty backup extension); the CI workflow
+(`release.yml`) runs on Linux and uses `-i` without the extra argument.
 - `Towers_Of_The_Wild_Reworked-regular-X.Y.Z.zip`
 - `Towers_Of_The_Wild_Reworked-fwaystones-X.Y.Z.zip`
 - `Towers_Of_The_Wild_Reworked-waystones-X.Y.Z.zip`
@@ -40,7 +43,7 @@ and creates a GitHub Release with `softprops/action-gh-release@v3`.
 
 ```
 data/totw_reworked/
-├── structure/<type>/                 # .nbt files (binary — edit in-game or with NBT editor)
+├── structure/<type>/                 # 4 .nbt files per type (binary — edit in-game or with NBT editor)
 ├── worldgen/template_pool/<type>/    # top.json, bottom.json
 ├── worldgen/structure/<type>.json
 ├── worldgen/structure_set/<type>.json
@@ -49,7 +52,19 @@ data/totw_reworked/
 └── loot_table/                       # tower_chest.json (land), ocean_tower_chest.json (ocean)
 ```
 
-The `top.json` `"location"` field references the `.nbt` structure file in `data/totw_reworked/structure/<type>/`. This is what `helper.sh` edits.
+Each `structure/<type>/` directory contains 4 NBT files:
+- `{type}_tower_top.nbt` — standard waystone top
+- `{type}_tower_bottom.nbt` — bottom (same for all variants)
+- `fwaystones_{type}_tower_top.nbt` — Fabric Waystones variant top
+- `waystone_{type}_tower_top.nbt` — Waystones mod variant top
+
+The `top.json` `"location"` field references the `.nbt` structure file in `data/totw_reworked/structure/<type>/`. This is what `build-release.sh` edits to swap between waystone variants.
+
+Land towers (`regular`, `derelict`, `derelict_grass`, `ice`, `jungle`) use
+`"step": "surface_structures"` and `"project_start_to_heightmap": "WORLD_SURFACE_WG"`.
+Ocean towers (`ocean`, `ocean_warm`) use `"step": "underground_structures"` and
+`"project_start_to_heightmap": "OCEAN_FLOOR_WG"`. When adding a new tower type,
+determine whether it's land or ocean and copy the appropriate pair of fields.
 
 ## NBT files
 
