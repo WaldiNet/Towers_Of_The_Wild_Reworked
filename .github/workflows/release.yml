@@ -14,9 +14,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "regular", prefix: "" }
-          - { name: "fwaystones", prefix: "fwaystones_" }
-          - { name: "waystones", prefix: "waystone_" }
+          - { name: "Regular", prefix: "" }
+          - { name: "Fabric Waystones", prefix: "fwaystones_" }
+          - { name: "Waystones", prefix: "waystone_" }
     steps:
       - uses: actions/checkout@v6
 
