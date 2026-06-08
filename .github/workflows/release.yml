@@ -13,14 +13,16 @@ env:
   MC_RANGE: "1.21-26.1.2"
   MODRINTH_RANGE: ">=1.21 <=26.1.2"
   CURSEFORGE_VERSIONS: "Minecraft 1.21:1.21,Minecraft 1.21.1:1.21.1,Minecraft 1.21.2:1.21.2,Minecraft 1.21.3:1.21.3,Minecraft 1.21.4:1.21.4,Minecraft 1.21.5:1.21.5,Minecraft 1.21.6:1.21.6,Minecraft 1.21.7:1.21.7,Minecraft 1.21.8:1.21.8,Minecraft 1.21.9:1.21.9,Minecraft 1.21.10:1.21.10,Minecraft 1.21.11:1.21.11,Minecraft 26.1:26.1,Minecraft 26.1.2:26.1.2"
-  VARIANTS: '[{"name":"Regular","prefix":""},{"name":"Fabric_Waystones","prefix":"fwaystones_"},{"name":"Waystones","prefix":"waystone_"}]'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        variant: ${{ fromJSON(env.VARIANTS) }}
+        variant:
+          - { name: "Regular", prefix: "" }
+          - { name: "Fabric_Waystones", prefix: "fwaystones_" }
+          - { name: "Waystones", prefix: "waystone_" }
     steps:
       - uses: actions/checkout@v6
 
@@ -87,7 +89,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        variant: ${{ fromJSON(env.VARIANTS) }}
+        variant:
+          - { name: "Regular" }
+          - { name: "Fabric_Waystones" }
+          - { name: "Waystones" }
     steps:
       - uses: actions/download-artifact@v8
 
@@ -109,7 +114,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        variant: ${{ fromJSON(env.VARIANTS) }}
+        variant:
+          - { name: "Regular" }
+          - { name: "Fabric_Waystones" }
+          - { name: "Waystones" }
     steps:
       - uses: actions/download-artifact@v8
 
