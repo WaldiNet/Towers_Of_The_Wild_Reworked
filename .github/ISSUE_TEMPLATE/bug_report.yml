@@ -130,13 +130,19 @@ body:
     validations:
       required: true
   - type: textarea
-    id: fabricVersion
+    id: modloaderVersion
     attributes:
-      label: Fabric Version (only if below v3.0.0)
-      description: "Please enter the used version of 'Fabric' and 'Fabric API'."
+      label: Modloader Version (only if below v3.0.0)
+      description: "Please enter the used version of your modloader (Forge, Fabric, etc.) and any relevant APIs like `Fabric API`. If you are using a modpack, please also include the name and version of the modpack."
       value: |
         - **Fabric:** ex. 0.12.5-1-17-1
         - **Fabric API:** ex. 0.42.1+1.17
+
+        - **Forge:** ex. X.Y.Z
+        
+        - **Modpack:** ex. ModpackName X.Y.Z
+        
+        - **Other:** ex. Quilt X.Y.Z
     validations:
       required: false
   - type: textarea
