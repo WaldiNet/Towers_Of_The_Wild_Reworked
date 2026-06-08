@@ -14,9 +14,12 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Regular", prefix: "" }
-          - { name: "Fabric_Waystones", prefix: "fwaystones_" }
-          - { name: "Waystones", prefix: "waystone_" }
+          - name: "Regular"
+            prefix: ""
+          - name: "Fabric_Waystones"
+            prefix: "fwaystones_"
+          - name: "Waystones"
+            prefix: "waystone_"
     steps:
       - uses: actions/checkout@v6
 
@@ -29,13 +32,14 @@ jobs:
 
       - name: Create archive
         run: |
-          zip -r "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip" \
-            data/ LICENSE pack.mcmeta pack.png README.md
+          MC_RANGE="1.21-26.1.2"
+          zip -r "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+$MC_RANGE-${{ matrix.variant.name }}.zip" \
+            data/ LICENSE pack.mcmeta pack.png README.md -x "*.bak"
 
       - uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.variant.name }}
-          path: "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip"
+          name: "${{ matrix.variant.name }}"
+          path: "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+1.21-26.1.2-${{ matrix.variant.name }}.zip"
 
   release:
     needs: build
@@ -43,13 +47,42 @@ jobs:
     steps:
       - uses: actions/download-artifact@v8
 
+      - name: Generate release notes
+        id: changelog
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NOTES=$(gh api repos/${{ github.repository }}/releases/generate-notes \
+            -f tag_name="${{ github.ref_name }}" \
+            -q '.body')
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
       - name: Create Release
         uses: softprops/action-gh-release@v3
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          generate_release_notes: true
+          body: ${{ steps.changelog.outputs.notes }}
           files: |
-            Regular/*.zip
-            Fabric_Waystones/*.zip
-            Waystones/*.zip
+            **/*.zip
+
+  modrinth:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
+
+      - uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: ${{ vars.MODRINTH_ID }}
+          version: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}+1.21-26.1.2
+          changelog: ${{ needs.release.outputs.notes }}
+          loaders: datapack
+          game-versions: ">=1.21 <=26.1.2"
+          files: |
+            **/*.zip
