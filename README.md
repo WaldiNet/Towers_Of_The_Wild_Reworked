@@ -21,7 +21,7 @@ If you are running 1.18.1 or lower please refer to the branch for [1.17.x](https
 ## Getting started
 ![Environment](https://img.shields.io/badge/environment-Client%20and%20Server-informational?style=flat)
 ![Modloader](https://img.shields.io/badge/Minecraft-Vanilla-informational?style=flat)
-![Teamspeak](https://img.shields.io/badge/compatibile%20with-1.18.2%20|%201.19-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
+![Teamspeak](https://img.shields.io/badge/compatibile%20with-1.18.2%20|%201.19%20|%201.20%20|%201.21%20|%2026.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
 [![Github SourceCode](https://img.shields.io/badge/SourceCode%20on-Github-informational?style=flat&logo=github&logoColor=white&color=3A414A)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked)
 
 This datapack adds tall towers in your world, inspired by **The Legend Of Zelda: Breath Of The Wild**.

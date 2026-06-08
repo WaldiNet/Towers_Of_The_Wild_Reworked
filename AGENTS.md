@@ -14,13 +14,13 @@ The root `pack.mcmeta` declares full multi-version support with four fields:
 - `pack_format: 48` — required by pre-1.21.9 versions
 - `supported_formats: [48, 101]` — required when supporting versions < 82
 - `min_format: 48` — minimum supported version (1.21.9+)
-- `max_format: 101` — maximum supported version (1.21.9+)
+- `max_format: [101, 1]` — maximum supported version (1.21.9+)
 
 This makes overlays unnecessary for format handling — the root declares the full
 range, and overlay-directory `pack.mcmeta` files are ignored by the game anyway.
 
 When the supported range changes, update `pack.mcmeta`, `build-release.sh`'s
-`MC_RANGE`, and the hardcoded version strings in `release.yml`.
+`MC_RANGE`, and the `MC_RANGE`/`MODRINTH_RANGE` env vars in `release.yml`.
 
 ## Build and release
 
@@ -61,6 +61,10 @@ variants (3 jobs total) to build all archives. Uploads artifacts, then a single
 A `modrinth` job runs after the build and publishes the same 3 archives to
 Modrinth via `cloudnode-pro/modrinth-publish@v2`. Requires `MODRINTH_TOKEN`
 secret and `MODRINTH_ID` variable configured in the repository.
+
+A `curseforge` job runs after the build and uploads each variant to CurseForge
+via `itsmeow/curseforge-upload@v3`. Requires `CF_API_TOKEN` secret and
+`CF_PROJECT_ID` variable configured in the repository.
 
 ## Tower structure
 
