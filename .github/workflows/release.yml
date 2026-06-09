@@ -88,9 +88,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Regular" }
-          - { name: "Fabric_Waystones" }
-          - { name: "Waystones" }
+          - { name: "Regular", dep: "[]" }
+          - { name: "Fabric_Waystones", dep: '[{"project_id":"sTZr7NVo","dependency_type":"required"}]' }
+          - { name: "Waystones", dep: '[{"project_id":"LOpKHB2A","dependency_type":"required"}]' }
     steps:
       - uses: actions/download-artifact@v8
 
@@ -104,6 +104,7 @@ jobs:
           loaders: datapack
           game-versions: ${{ env.MODRINTH_RANGE }}
           files: "${{ matrix.variant.name }}/Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+${{ env.MC_RANGE }}-${{ matrix.variant.name }}.zip"
+          dependencies: ${{ matrix.variant.dep }}
 
   # https://github.com/itsmeow/curseforge-upload
   curseforge:
@@ -113,9 +114,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Regular" }
-          - { name: "Fabric_Waystones" }
-          - { name: "Waystones" }
+          - { name: "Regular", dep: "" }
+          - { name: "Fabric_Waystones", dep: "fabric-waystones:requiredDependency" }
+          - { name: "Waystones", dep: "waystones:requiredDependency" }
     steps:
       - uses: actions/download-artifact@v8
 
@@ -128,3 +129,4 @@ jobs:
           game_versions: ${{ env.CURSEFORGE_VERSIONS }}
           changelog: ${{ needs.release.outputs.notes }}
           changelog_type: markdown
+          relations: ${{ matrix.variant.dep }}
