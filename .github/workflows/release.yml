@@ -21,7 +21,7 @@ jobs:
       matrix:
         variant:
           - { name: "Regular", prefix: "" }
-          - { name: "Fabric_Waystones", prefix: "fwaystones_" }
+          - { name: "Wraith_Waystones", prefix: "fwaystones_" }
           - { name: "Waystones", prefix: "waystone_" }
     steps:
       - uses: actions/checkout@v6
@@ -88,9 +88,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Regular", dep: "[]" }
-          - { name: "Fabric_Waystones", dep: '[{"project_id":"sTZr7NVo","dependency_type":"required"}]' }
           - { name: "Waystones", dep: '[{"project_id":"LOpKHB2A","dependency_type":"required"}]' }
+          - { name: "Wraith_Waystones", dep: '[{"project_id":"sTZr7NVo","dependency_type":"required"}]' }
+          - { name: "Regular", dep: "[]" }
     steps:
       - uses: actions/download-artifact@v8
 
@@ -114,9 +114,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Regular", dep: "" }
-          - { name: "Fabric_Waystones", dep: "fabric-waystones:requiredDependency" }
           - { name: "Waystones", dep: "waystones:requiredDependency" }
+          - { name: "Wraith_Waystones", dep: "fabric-waystones:requiredDependency" }
+          - { name: "Regular", dep: "" }
     steps:
       - uses: actions/download-artifact@v8
 
