@@ -88,9 +88,9 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Waystones", dep: '[{"project_id":"LOpKHB2A","dependency_type":"required"}]' }
-          - { name: "Wraith_Waystones", dep: '[{"project_id":"sTZr7NVo","dependency_type":"required"}]' }
           - { name: "Regular", dep: "[]" }
+          - { name: "Wraith_Waystones", dep: '[{"project_id":"sTZr7NVo","dependency_type":"required"}]' }
+          - { name: "Waystones", dep: '[{"project_id":"LOpKHB2A","dependency_type":"required"}]' }
     steps:
       - uses: actions/download-artifact@v8
 
@@ -114,8 +114,8 @@ jobs:
     strategy:
       matrix:
         variant:
-          - { name: "Waystones", dep: "waystones:requiredDependency" }
           - { name: "Wraith_Waystones", dep: "fabric-waystones:requiredDependency" }
+          - { name: "Waystones", dep: "waystones:requiredDependency" }
           - { name: "Regular", dep: "" }
     steps:
       - uses: actions/download-artifact@v8
