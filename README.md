@@ -21,7 +21,7 @@ If you are running 1.18.1 or lower please refer to the branch for [1.17.x](https
 ## Getting started
 ![Environment](https://img.shields.io/badge/environment-Client%20and%20Server-informational?style=flat)
 ![Modloader](https://img.shields.io/badge/Minecraft-Vanilla-informational?style=flat)
- ![Compatibility](https://img.shields.io/badge/compatible%20with-1.18.2%20|%201.19%20|%201.20%20|%201.21%20|%2026.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
+![Compatibility](https://img.shields.io/badge/compatible%20with-1.18.2%20|%201.19%20|%201.20%20|%201.21%20|%2026.1-informational?style=flat&logo=curseforge&logoColor=white&color=F26922)
 [![Github SourceCode](https://img.shields.io/badge/SourceCode%20on-Github-informational?style=flat&logo=github&logoColor=white&color=3A414A)](https://github.com/xPand4B/Towers_Of_The_Wild_Reworked)
 
 This datapack adds tall towers in your world, inspired by **The Legend Of Zelda: Breath Of The Wild**.
@@ -30,7 +30,8 @@ This will make your explorations a bit more exciting !
 
 At the top of the tower *(which is purposely not so easy to climb)*, you will find a chest with some loot, as well as a nice view :)
 
-Plus, it is also compatible with the [Waystones (Fabric Edition)](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) and [Fabric Waystones](https://www.curseforge.com/minecraft/mc-mods/fabric-waystones) mod. If you have one of these mods installed a waystone will spawn on top of each tower.
+Plus, it is also compatible with the [Wraith Waystones](https://modrinth.com/mod/fwaystones) and [Waystones](https://modrinth.com/mod/waystones) mod.
+If you have one of these mods installed a waystone will spawn on top of each tower.
 
 This pack does not add any blocks or items to the game *(if that matters to you)*.
 
@@ -49,7 +50,7 @@ This pack does not add any blocks or items to the game *(if that matters to you)
 
 ### Features
 * **Compatible with Vanilla, Fabric and Forge!**
-  * If [Waystones (Fabric Edition)](https://www.curseforge.com/minecraft/mc-mods/waystones-fabric) or [Fabric Waystones](https://www.curseforge.com/minecraft/mc-mods/fabric-waystones) mod is active, waystones can spawn on top of each tower!
+  * If [Wraith Waystones](https://modrinth.com/mod/fwaystones) or [Waystones](https://modrinth.com/mod/waystones) mod is active, waystones can spawn on top of each tower!
     * **Only install one of them!**
 * Randomly generating Towers in your world
 * Great loot on top of every Tower!
