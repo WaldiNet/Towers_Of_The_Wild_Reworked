@@ -99,7 +99,7 @@ jobs:
           token: ${{ secrets.MODRINTH_TOKEN }}
           project: ${{ vars.MODRINTH_ID }}
           version: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}+${{ env.MC_RANGE }}
+          name: ${{ github.ref_name }}+${{ env.MC_RANGE }} ~ ${{ matrix.variant.name }}
           changelog: ${{ needs.release.outputs.notes }}
           loaders: datapack
           game-versions: ${{ env.MODRINTH_RANGE }}
@@ -126,6 +126,7 @@ jobs:
           project_id: ${{ vars.CF_PROJECT_ID }}
           game_endpoint: minecraft
           file_path: "${{ matrix.variant.name }}/Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+${{ env.MC_RANGE }}-${{ matrix.variant.name }}.zip"
+          display_name: ${{ github.ref_name }}+${{ env.MC_RANGE }} ~ ${{ matrix.variant.name }}
           game_versions: ${{ env.CURSEFORGE_VERSIONS }}
           changelog: ${{ needs.release.outputs.notes }}
           changelog_type: markdown
