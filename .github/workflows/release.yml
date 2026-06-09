@@ -12,7 +12,7 @@ permissions:
 env:
   MC_RANGE: "1.21-26.1.2"
   MODRINTH_RANGE: ">=1.21 <=26.1.2"
-  CURSEFORGE_VERSIONS: "Minecraft 1.21:1.21,Minecraft 1.21.1:1.21.1,Minecraft 1.21.2:1.21.2,Minecraft 1.21.3:1.21.3,Minecraft 1.21.4:1.21.4,Minecraft 1.21.5:1.21.5,Minecraft 1.21.6:1.21.6,Minecraft 1.21.7:1.21.7,Minecraft 1.21.8:1.21.8,Minecraft 1.21.9:1.21.9,Minecraft 1.21.10:1.21.10,Minecraft 1.21.11:1.21.11,Minecraft 26.1:26.1,Minecraft 26.1.2:26.1.2"
+  CURSEFORGE_VERSIONS: "Minecraft 1.21:1.21,Minecraft 1.21:1.21.1,Minecraft 1.21:1.21.2,Minecraft 1.21:1.21.3,Minecraft 1.21:1.21.4,Minecraft 1.21:1.21.5,Minecraft 1.21:1.21.6,Minecraft 1.21:1.21.7,Minecraft 1.21:1.21.8,Minecraft 1.21:1.21.9,Minecraft 1.21:1.21.10,Minecraft 1.21:1.21.11,Minecraft 26.1:26.1,Minecraft 26.1:26.1.2"
 
 jobs:
   build:
@@ -80,6 +80,7 @@ jobs:
           files: |
             **/*.zip
 
+  # https://github.com/cloudnode-pro/modrinth-publish
   modrinth:
     if: startsWith(github.ref, 'refs/tags/')
     needs: release
@@ -102,7 +103,7 @@ jobs:
           changelog: ${{ needs.release.outputs.notes }}
           loaders: datapack
           game-versions: ${{ env.MODRINTH_RANGE }}
-          files: ${{ matrix.variant.name }}/*.zip
+          files: "${{ matrix.variant.name }}/Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+${{ env.MC_RANGE }}-${{ matrix.variant.name }}.zip"
 
   # https://github.com/itsmeow/curseforge-upload
   curseforge:
