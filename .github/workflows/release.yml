@@ -4,9 +4,15 @@ on:
   push:
     tags:
       - '*'
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  MC_RANGE: "1.21-26.1.2"
+  MODRINTH_RANGE: ">=1.21 <=26.1.2"
+  CURSEFORGE_VERSIONS: "Minecraft 1.21:1.21,Minecraft 1.21.1:1.21.1,Minecraft 1.21.2:1.21.2,Minecraft 1.21.3:1.21.3,Minecraft 1.21.4:1.21.4,Minecraft 1.21.5:1.21.5,Minecraft 1.21.6:1.21.6,Minecraft 1.21.7:1.21.7,Minecraft 1.21.8:1.21.8,Minecraft 1.21.9:1.21.9,Minecraft 1.21.10:1.21.10,Minecraft 1.21.11:1.21.11,Minecraft 26.1:26.1,Minecraft 26.1.2:26.1.2"
 
 jobs:
   build:
@@ -29,27 +35,95 @@ jobs:
 
       - name: Create archive
         run: |
-          zip -r "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip" \
-            data/ LICENSE pack.mcmeta pack.png README.md
+          zip -r "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+$MC_RANGE-${{ matrix.variant.name }}.zip" \
+            data/ LICENSE pack.mcmeta pack.png README.md -x "*.bak"
 
       - uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.variant.name }}
-          path: "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}-${{ matrix.variant.name }}.zip"
+          name: "${{ matrix.variant.name }}"
+          path: "Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+${{ env.MC_RANGE }}-${{ matrix.variant.name }}.zip"
 
   release:
     needs: build
     runs-on: ubuntu-latest
+    outputs:
+      notes: ${{ steps.changelog.outputs.notes }}
     steps:
       - uses: actions/download-artifact@v8
 
+      - name: Generate release notes
+        id: changelog
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NOTES=$(gh api repos/${{ github.repository }}/releases/generate-notes \
+            -f tag_name="${{ github.ref_name }}" \
+            -q '.body')
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Test build summary
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          echo "=== Test Build (no release created) ==="
+          echo "Download the .zip artifacts from the Actions run summary to inspect them."
+
       - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v3
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          generate_release_notes: true
+          body: ${{ steps.changelog.outputs.notes }}
           files: |
-            Regular/*.zip
-            Fabric_Waystones/*.zip
-            Waystones/*.zip
+            **/*.zip
+
+  modrinth:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant:
+          - { name: "Regular" }
+          - { name: "Fabric_Waystones" }
+          - { name: "Waystones" }
+    steps:
+      - uses: actions/download-artifact@v8
+
+      - uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: ${{ vars.MODRINTH_ID }}
+          version: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}+${{ env.MC_RANGE }}
+          changelog: ${{ needs.release.outputs.notes }}
+          loaders: datapack
+          game-versions: ${{ env.MODRINTH_RANGE }}
+          files: ${{ matrix.variant.name }}/*.zip
+
+  # https://github.com/itsmeow/curseforge-upload
+  curseforge:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant:
+          - { name: "Regular" }
+          - { name: "Fabric_Waystones" }
+          - { name: "Waystones" }
+    steps:
+      - uses: actions/download-artifact@v8
+
+      - uses: itsmeow/curseforge-upload@v3
+        with:
+          token: ${{ secrets.CF_API_TOKEN }}
+          project_id: ${{ vars.CF_PROJECT_ID }}
+          game_endpoint: minecraft
+          file_path: "${{ matrix.variant.name }}/Towers_Of_The_Wild_Reworked-${{ github.ref_name }}+${{ env.MC_RANGE }}-${{ matrix.variant.name }}.zip"
+          game_versions: ${{ env.CURSEFORGE_VERSIONS }}
+          changelog: ${{ needs.release.outputs.notes }}
+          changelog_type: markdown
