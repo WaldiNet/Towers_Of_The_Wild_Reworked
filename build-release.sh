@@ -8,7 +8,7 @@ TOWER_DIR="data/totw_reworked/worldgen/template_pool"
 
 VARIANTS=(
   "Regular|"
-  "Fabric_Waystones|fwaystones_"
+  "Wraith_Waystones|fwaystones_"
   "Waystones|waystone_"
 )
 
