@@ -46,11 +46,14 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    outputs:
+      notes: ${{ steps.changelog.outputs.notes }}
     steps:
       - uses: actions/download-artifact@v8
 
       - name: Generate release notes
         id: changelog
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -60,12 +63,6 @@ jobs:
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           echo "$NOTES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Print release notes
-        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        run: |
-          echo "=== Release Notes ==="
-          echo "${{ steps.changelog.outputs.notes }}"
 
       - name: Test build summary
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}

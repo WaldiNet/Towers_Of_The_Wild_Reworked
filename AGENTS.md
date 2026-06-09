@@ -6,15 +6,15 @@ Minecraft Java Edition datapack (namespace `totw_reworked`). No build system, no
 
 ## pack.mcmeta
 
-`pack_format: 48` = Minecraft 1.21 – 1.21.3. For each new pack format, create a sub-release
+`pack_format: 48` = Minecraft 1.21 – 1.21.1. For each new pack format, create a sub-release
 rather than using overlays. Once reaching format 88.0 (1.21.9+), switch to using
 `min_format`/`max_format` arrays instead of sub-releases.
 
 The root `pack.mcmeta` declares full multi-version support with four fields:
 - `pack_format: 48` — required by pre-1.21.9 versions
 - `supported_formats: [48, 101]` — required when supporting versions < 82
-- `min_format: 48` — minimum supported version (1.21.9+)
-- `max_format: [101, 1]` — maximum supported version (1.21.9+)
+- `min_format: 48` — minimum supported pack format
+- `max_format: [101, 1]` — maximum supported pack format
 
 This makes overlays unnecessary for format handling — the root declares the full
 range, and overlay-directory `pack.mcmeta` files are ignored by the game anyway.
@@ -34,7 +34,7 @@ Automates building all 3 variants as `.zip` archives for distribution:
 
 Iterates over all 7 tower types × 3 waystone variants, runs `sed` to swap the
 `"location"` in each `top.json`, and produces 3 archives. Each archive is a
-universal pack that works for the full supported MC version range via overlays.
+universal pack that works for the full supported MC version range without overlays.
 
 The `sed` call on macOS requires `-i ''` (empty backup extension); the CI workflow
 (`release.yml`) runs on Linux and uses `-i` without the extra argument.
