@@ -12,7 +12,7 @@ VARIANTS=(
   "Waystones|waystone_"
 )
 
-MC_RANGE="1.21-26.1.2"
+MC_RANGE="1.21-26.2"
 
 cleanup() {
   for type in "${TYPES[@]}"; do
